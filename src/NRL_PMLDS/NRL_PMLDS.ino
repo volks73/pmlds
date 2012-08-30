@@ -1,21 +1,6 @@
 /*
- NRL_PMLDS.ino - Firmware for controling the PMLDS using an Atmega368P with the Optiboot bootloader.
- Created By: Christopher R. Field <christopher.field@nrl.navy.mil, cfield2@gmail.com>
- Verison: 3.0.2
- 
- This library is free software; you can redistribute it and/or
- modify it under the terms of the GNU Lesser General Public
- License as published by the Free Software Foundation; either
- version 2.1 of the License, or (at your option) any later version.
-
- This library is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- Lesser General Public License for more details.
-
- You should have received a copy of the GNU Lesser General Public
- License along with this library; if not, write to the Free Software
- Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+ Created By: Christopher R. Field <christopher.field@nrl.navy.mil>
+ Verison: 3.0.0
  
  A pressure-driven, pneumatic, flow control system. An electronic flow meter with RS-232 communication
  is used as a feedback to adjust the pressure to maintain a constant flow in the uL/min range. An 
@@ -84,11 +69,11 @@
  write new values excessively. This version also adds the serial communication commands listed below
  to those implemented in version 2.0.0 of the code.
 
- KP=#.######	Sets the Kp PID constant, unitless, Recommended Value = 5E-7
+ KP=#.######	Sets the Kp PID constant, unitless
  KP?		Gets the Kp PID constant, unitless
- KI=#.######	Sets the Ki PID constant, unitless, Recommended Value = 1E-4
+ KI=#.######	Sets the Ki PID constant, unitless
  KI?		Gets the Ki PID constant, unitless
- KD=#.######	Sets the Kd PID constant, unitless, Recommended Value = 1E-1
+ KD=#.######	Sets the Kd PID constant, unitless
  KD?		Gets the Kd PID constant, unitless
  DF=##.#	Sets the default flow rate in uL/min
  DF?		Gets the default flow rate in uL/min
@@ -103,11 +88,6 @@
  PCB with VCC and GND supply planes and added support to read the pressure directly from the
  EPC. The Arduino Uno is not used for this circuit but can be used as a bootloader and code
  uploader for the microcontroller.
- 
- Version 3.0.1 adds 3 second delay during power up to let the flow meter warm up and displays a 
- "warming up" message on the LCD screen.
- 
- Version 3.0.2 adds additional documentation and includes the GNU Lesser GPL software license.
  */
 #include <LiquidCrystal.h>
 #include <Wire.h>
@@ -261,14 +241,9 @@ void setup()
   // Print some startup information to the user.
   // Naval Research Laboratory (NRL)
   // Pneumatically Modulated Liquid Delivery System (PMLDS)
-  lcd.print("NRL-PMLDS v3.0.2");
+  lcd.print("NRL-PMLDS v3.0.0");
   lcd.setCursor(0, 1);
-  lcd.print("Warming up");
-  
-  // Wait 3 seconds to allow the flow meter to warm up.
-  delay(3000);
 
-  lcd.setCursor(0, 1);
   lcd.print("Connecting");
 
   /*
