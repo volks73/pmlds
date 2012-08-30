@@ -1,7 +1,7 @@
 /*
- NRL_PMLDS.ino - Firmware for controling the PMLDS using an Atmega368P with the Optiboot bootloader.
+ NRL_PMLDS.ino - Firmware for controling the PMLDS using an Arduino Uno Shield
  Created By: Christopher R. Field <christopher.field@nrl.navy.mil, cfield2@gmail.com>
- Verison: 3.0.2
+ Verison: 2.3.0
  
  This library is free software; you can redistribute it and/or
  modify it under the terms of the GNU Lesser General Public
@@ -77,18 +77,18 @@
  communication code, a purge option is not really needed and opens up space for more options
  in the future.
  
- Version 2.2.1 sets the default flow rate to 40 uL/min and updates some documentation.
-
+ Version 2.2.1 sets the default flow rate to 40 uL/min.
+ 
  Version 2.3.0 adds support for saving PID constants and default target flow rates to EEPROM for storage
  of values during power off and power on. EEPROM writes are limited to 100,000 cycles, so do not
  write new values excessively. This version also adds the serial communication commands listed below
  to those implemented in version 2.0.0 of the code.
 
- KP=#.######	Sets the Kp PID constant, unitless, Recommended Value = 5E-7
+ KP=#.######	Sets the Kp PID constant, unitless
  KP?		Gets the Kp PID constant, unitless
- KI=#.######	Sets the Ki PID constant, unitless, Recommended Value = 1E-4
+ KI=#.######	Sets the Ki PID constant, unitless
  KI?		Gets the Ki PID constant, unitless
- KD=#.######	Sets the Kd PID constant, unitless, Recommended Value = 1E-1
+ KD=#.######	Sets the Kd PID constant, unitless
  KD?		Gets the Kd PID constant, unitless
  DF=##.#	Sets the default flow rate in uL/min
  DF?		Gets the default flow rate in uL/min
@@ -96,18 +96,6 @@
  Scientific notation support has been added for all commands where value is being set, whereever #.#####
  appear in the above listing of commands including commands from Version 2.0.0. The commands have also
  changed slightly for setting and getting the target flow (TF), average flow (AF), and instant flow (IF).
- 
- Version 3.0.0 adds support for a circuit that is not a shield for the Arduino Uno, but uses
- the Atmega368 Atmel microcontroller with the Uno bootloader burned into it (Sparkfun, DEV-10524).
- The all-in-one circuit board includes two voltage regulators for 9V and 5V supplies, a 4-layer
- PCB with VCC and GND supply planes and added support to read the pressure directly from the
- EPC. The Arduino Uno is not used for this circuit but can be used as a bootloader and code
- uploader for the microcontroller.
- 
- Version 3.0.1 adds 3 second delay during power up to let the flow meter warm up and displays a 
- "warming up" message on the LCD screen.
- 
- Version 3.0.2 adds additional documentation and includes the GNU Lesser GPL software license.
  */
 #include <LiquidCrystal.h>
 #include <Wire.h>
@@ -131,12 +119,12 @@ const float MAX_PRESSURE = 15.0; // psi
 /*
   LCD pins and constants.
  */
-const int LCD_RS = 2;
-const int LCD_ENABLE = 3;
-const int LCD_D4 = 4;
-const int LCD_D5 = 5;
-const int LCD_D6 = 6;
-const int LCD_D7 = 7;
+const int LCD_RS = 7;
+const int LCD_ENABLE = 6;
+const int LCD_D4 = 5;
+const int LCD_D5 = 4;
+const int LCD_D6 = 3;
+const int LCD_D7 = 2;
 const int TARGET_FLOW_RATE_ROW = 0;
 const int ACTUAL_FLOW_RATE_ROW = 1;
 const int LCD_NUM_COLS = 16;
@@ -147,10 +135,10 @@ const int VOLTAGE_PRECISION = 2;
 /*
   One's and ten's place increment/decrement switches pins and constants.
  */
-const int INCREMENT_ONE_PIN = 10;
-const int DECREMENT_ONE_PIN = 11;
-const int INCREMENT_TEN_PIN = 8;
-const int DECREMENT_TEN_PIN = 9;
+const int INCREMENT_ONE_PIN = 8;
+const int DECREMENT_ONE_PIN = 9;
+const int INCREMENT_TEN_PIN = 10;
+const int DECREMENT_TEN_PIN = 11;
 const int ONE_INCREMENT = 1; // uL/min
 const int TEN_INCREMENT = 10; // uL/min
 
@@ -162,8 +150,8 @@ const int MAX_FLOW_RATE = 1000; // uL/min
 const int MIN_FLOW_RATE = 10; // uL/min
 const int DEFAULT_FLOW_RATE = 40; // uL/min
 const int FLOW_RATE_MULTIPLIER = 10; // uL/min
-const int FLOW_RATE_QUEUE_SIZE = 10; // Number of flow rates to average
-const int FLOW_RATE_PRECISION = 1; // Number of decimal places to display
+const int FLOW_RATE_QUEUE_SIZE = 10;
+const int FLOW_RATE_PRECISION = 1;
 
 /*
   EEPROM constants.
@@ -177,6 +165,9 @@ const int KD_ADDRESS = 16;
 /*
   PID constants.
  */
+const float K_P = 5E-8; // Previous value: 0.0000001
+const float K_I = 1E-5; // Previous value: 0.000001
+const float K_D = 1E-2; // Previous value: 0.1
 const unsigned long PID_DELAY = 2500; // milliseconds
 const int PID_PRECISION = 3;
 
@@ -211,9 +202,9 @@ int prevIncrementTenState = HIGH;
 int prevDecrementTenState = HIGH;
 unsigned long lastUpdate = 0; // milliseconds
 unsigned long currentTime = 0; // milliseconds
-float Kp = 0.0; // unitless
-float Ki = 0.0; // unitless
-float Kd = 0.0; // unitless
+float Kp = K_P; // unitless
+float Ki = K_I; // unitless
+float Kd = K_D; // unitless
 
 boolean pidActivated = true;
 boolean flowMeterConnected = false;
@@ -261,14 +252,12 @@ void setup()
   // Print some startup information to the user.
   // Naval Research Laboratory (NRL)
   // Pneumatically Modulated Liquid Delivery System (PMLDS)
-  lcd.print("NRL-PMLDS v3.0.2");
+  lcd.print("NRL-PMLDS v2.3.0");
   lcd.setCursor(0, 1);
-  lcd.print("Warming up");
-  
-  // Wait 3 seconds to allow the flow meter to warm up.
+
+  // Delay 3 seconds to give the flow meter time to warm up.
   delay(3000);
 
-  lcd.setCursor(0, 1);
   lcd.print("Connecting");
 
   /*
@@ -650,11 +639,7 @@ String readSerialCommand()
 
 /*
   Read the voltage from the cpu serial buffer and set the DAC based on the voltage. The PID control
- must be paused. The digital-to-analog converter is set to a number based on the conversion of the
- control voltage to an integer number between 0 and 255.
- 
- @param command The command read from the serial buffer.
- @return The digital-to-analog converter number, which will be between 0 and MAX_DAC_NUMBER (255).
+ must be paused.
  
  @param command The command read from the serial buffer.
  @return The digital-to-analog converter number, which will be between 0 and MAX_DAC_NUMBER (255).
@@ -676,11 +661,7 @@ int readSerialVoltage(String command)
 
 /*
   Read the pressure from the cpu serial buffer and set the DAC based on the pressure. The PID control
- must be paused. The digital-to-analog converter is set to a number based on the conversion of the pressure
- in PSI to an integer number between 0 and 255.
- 
- @param command The command read from the serial buffer.
- @return The digital-to-analog converter number, which will be between 0 and MAX_DAC_NUMBER (255).
+ must be paused.
  
  @param command The command read from the serial buffer.
  @return The digital-to-analog converter number, which will be between 0 and MAX_DAC_NUMBER (255).
@@ -705,9 +686,6 @@ int readSerialPressure(String command)
   
   @param command The command read from the serial buffer.
   @return The flow rate in uL/min * FLOW_RATE_MULTIPLIER (10).
-  
-  @param command The command read from the serial buffer.
-  @return The flow rate in uL/min * FLOW_RATE_MULTIPLIER (10).
  */
 int readSerialFlowRate(String command)
 {
@@ -720,9 +698,6 @@ int readSerialFlowRate(String command)
 
 /*
   Gets the value to set a parameter from the command.
-  
-  @param command The command read from the serial buffer.
-  @return The value from a set command.
   
   @param command The command read from the serial buffer.
   @return The value from a set command.
@@ -943,7 +918,7 @@ void updateLCDFlowRate(int flowRate, int row)
   lcd.setCursor(4, row);
 
   // If the flow rate is less than 10 uL/min, print a space
-  if ( flowRate < (10 * FLOW_RATE_MULTIPLIER) )
+  if ( flowRate < 10.0 )
   {
     lcd.print(" ");
   }
