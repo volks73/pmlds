@@ -1,21 +1,6 @@
 /*
- NRL_PMLDS.ino - Firmware for controling the PMLDS using an Atmega368P with the Optiboot bootloader.
- Created By: Christopher R. Field <christopher.field@nrl.navy.mil, cfield2@gmail.com>
- Verison: 3.0.2
- 
- This library is free software; you can redistribute it and/or
- modify it under the terms of the GNU Lesser General Public
- License as published by the Free Software Foundation; either
- version 2.1 of the License, or (at your option) any later version.
-
- This library is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- Lesser General Public License for more details.
-
- You should have received a copy of the GNU Lesser General Public
- License along with this library; if not, write to the Free Software
- Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+ Created By: Christopher R. Field <christopher.field@nrl.navy.mil>
+ Verison: 4.0.0
  
  A pressure-driven, pneumatic, flow control system. An electronic flow meter with RS-232 communication
  is used as a feedback to adjust the pressure to maintain a constant flow in the uL/min range. An 
@@ -23,7 +8,7 @@
  with 5V equal to the maximum controllable pressure. The EPC is only capable of controlling pressure
  to 10% its maximum value. The user can adjust the target flow rate using two Mom-Off-Mom switches. One 
  switch is for the 1's position and the second switch is for the 10's position, with a maximum flow rate
- of 1000 uL/min and a  minimum flow rate of 10 uL/min. However, at 10 uL/min the flow meter maybe
+ of 1000 uL/min and a minimum flow rate of 10 uL/min. However, at 10 uL/min the flow meter maybe
  unstable. Depending the tubing inner diameter, EPC maximum range, and visocity of the liquid, a flow rate 
  of 1000 uL/min may not be possibleA LCD reports the target flow rate (TF) in uL/min, the actual flow rate 
  (AF) in ul/min, the EPC control voltage (V) in volts, and the pressure (P) in PSI.
@@ -43,16 +28,16 @@
  PMLDS via the RS-232 protocol on a Serial port at 9600 Baud Rate, 8 data bits, 1 stop bit, no parity,
  and no hardware flow control. The commands are listed below:
  
- TF=##.# Sets the target flow in uL/min
- TF?     Gets the target flow rate in uL/min
- AF?     Gets the average flow rate in uL/min
- IF?     Gets the instant flow rate in uL/min, will be noisy compared to A? command
+ T=##.# Sets the target flow in uL/min
+ T?     Gets the target flow rate in uL/min
+ A?     Gets the average flow rate in uL/min
+ I?     Gets the instant flow rate in uL/min, will be noisy compared to A? command
  V=#.## Sets the EPC control voltage in volts, note that PID control must be paused
  V?     Gets the EPC control voltage in volts
  P=##.# Sets the pressure in PSI, note that PID control must be paused
  P?     Gets the pressure in PSI
  ||     Pause PID Control
- |>     Resume or restart PID Control
+ |>     Resume PID Control
  
  All commands must be terminated with a newline character (\n), will return "ERROR" if the termination
  character (\n) was not received before SERIAL_TIMEOUT (1 second). 
@@ -77,25 +62,7 @@
  communication code, a purge option is not really needed and opens up space for more options
  in the future.
  
- Version 2.2.1 sets the default flow rate to 40 uL/min and updates some documentation.
-
- Version 2.3.0 adds support for saving PID constants and default target flow rates to EEPROM for storage
- of values during power off and power on. EEPROM writes are limited to 100,000 cycles, so do not
- write new values excessively. This version also adds the serial communication commands listed below
- to those implemented in version 2.0.0 of the code.
-
- KP=#.######	Sets the Kp PID constant, unitless, Recommended Value = 5E-7
- KP?		Gets the Kp PID constant, unitless
- KI=#.######	Sets the Ki PID constant, unitless, Recommended Value = 1E-4
- KI?		Gets the Ki PID constant, unitless
- KD=#.######	Sets the Kd PID constant, unitless, Recommended Value = 1E-1
- KD?		Gets the Kd PID constant, unitless
- DF=##.#	Sets the default flow rate in uL/min
- DF?		Gets the default flow rate in uL/min
-
- Scientific notation support has been added for all commands where value is being set, whereever #.#####
- appear in the above listing of commands including commands from Version 2.0.0. The commands have also
- changed slightly for setting and getting the target flow (TF), average flow (AF), and instant flow (IF).
+ Version 2.2.1 sets the default flow rate to 40 uL/min.
  
  Version 3.0.0 adds support for a circuit that is not a shield for the Arduino Uno, but uses
  the Atmega368 Atmel microcontroller with the Uno bootloader burned into it (Sparkfun, DEV-10524).
@@ -104,16 +71,20 @@
  EPC. The Arduino Uno is not used for this circuit but can be used as a bootloader and code
  uploader for the microcontroller.
  
- Version 3.0.1 adds 3 second delay during power up to let the flow meter warm up and displays a 
- "warming up" message on the LCD screen.
- 
- Version 3.0.2 adds additional documentation and includes the GNU Lesser GPL software license.
+ Version 4.0.0 adds support for the LG16-0480-A liquid flow meter from Sensirion. The LG16-0480-A
+ flow meter is an OEM component that reports the liquid flow rate as an analog voltage between
+ 0-5V with 2.5V = 0 uL/min and 0V = -50 uL/min. The LG16-0480-A is intended to be housed inside
+ the same box as the EPC and microcontroller, where as with the ASL1600 it was mounted on top of
+ the box that housed the EPC and microcontroller. Since the LG16-0480-A uses an analog voltage to
+ report the flow rate, the ASL1600 Library is no longer needed and two additional digital channels
+ are freed. The rolling 10 point average is still needed as the flow meter is very noisy and the rest
+ of the circuit and program remain the same. CPU communication with the RS-232 protocol and a DB9
+ connector has been moved to Digital 0 (RX) and 1 (TX) to allow for faster baud rates than 9600. This
+ change should appear transparent to any computer programs interfaced with the PMLDS control box. However,
+ the software serial library is no longer needed.
  */
 #include <LiquidCrystal.h>
 #include <Wire.h>
-#include <SoftwareSerial.h>
-#include <EEPROM.h>
-#include <ASL1600.h>
 #include <PID.h>
 
 /*
@@ -131,12 +102,12 @@ const float MAX_PRESSURE = 15.0; // psi
 /*
   LCD pins and constants.
  */
-const int LCD_RS = 2;
-const int LCD_ENABLE = 3;
-const int LCD_D4 = 4;
-const int LCD_D5 = 5;
-const int LCD_D6 = 6;
-const int LCD_D7 = 7;
+const int LCD_RS = 7;
+const int LCD_ENABLE = 6;
+const int LCD_D4 = 5;
+const int LCD_D5 = 4;
+const int LCD_D6 = 3;
+const int LCD_D7 = 2;
 const int TARGET_FLOW_RATE_ROW = 0;
 const int ACTUAL_FLOW_RATE_ROW = 1;
 const int LCD_NUM_COLS = 16;
@@ -147,44 +118,37 @@ const int VOLTAGE_PRECISION = 2;
 /*
   One's and ten's place increment/decrement switches pins and constants.
  */
-const int INCREMENT_ONE_PIN = 10;
-const int DECREMENT_ONE_PIN = 11;
-const int INCREMENT_TEN_PIN = 8;
-const int DECREMENT_TEN_PIN = 9;
+const int INCREMENT_ONE_PIN = 8;
+const int DECREMENT_ONE_PIN = 9;
+const int INCREMENT_TEN_PIN = 10;
+const int DECREMENT_TEN_PIN = 11;
 const int ONE_INCREMENT = 1; // uL/min
 const int TEN_INCREMENT = 10; // uL/min
 
 /*
   Flow sensor constants.
  */
-const int MAX_CONNECTION_ATTEMPTS = 3;
-const int MAX_FLOW_RATE = 1000; // uL/min
-const int MIN_FLOW_RATE = 10; // uL/min
+const int FLOW_METER_PIN = 1; // Analog channel
+const int MAX_FLOW_RATE = 50; // uL/min
+const int MIN_FLOW_RATE = 1; // uL/min
 const int DEFAULT_FLOW_RATE = 40; // uL/min
 const int FLOW_RATE_MULTIPLIER = 10; // uL/min
-const int FLOW_RATE_QUEUE_SIZE = 10; // Number of flow rates to average
-const int FLOW_RATE_PRECISION = 1; // Number of decimal places to display
-
-/*
-  EEPROM constants.
-*/
-const int NUM_BYTES_PER_FLOAT = 4;
-const int DF_ADDRESS = 0;
-const int KP_ADDRESS = 4;
-const int KI_ADDRESS = 8;
-const int KD_ADDRESS = 16;
+const int FLOW_RATE_QUEUE_SIZE = 10;
+const int FLOW_RATE_PRECISION = 1;
 
 /*
   PID constants.
  */
+const float K_P = 0.0000005; // Previous value: 0.0000001
+const float K_I = 0.00001; // Previous value: 0.000001
+const float K_D = 0.01; // Previous value: 0.1
 const unsigned long PID_DELAY = 2500; // milliseconds
-const int PID_PRECISION = 3;
 
 /*
   CPU Serial Communication constants.
  */
-const int RX_PIN = 12;
-const int TX_PIN = 13;
+const int RX_PIN = 0;
+const int TX_PIN = 1;
 const int CPU_BAUD_RATE = 9600;
 const char GET_COMMAND = '?';
 const char SET_COMMAND = '=';
@@ -196,7 +160,6 @@ const unsigned long SERIAL_TIMEOUT = 1000; // milliseconds
   Global variables.
 */
 int targetFlowRate = DEFAULT_FLOW_RATE * FLOW_RATE_MULTIPLIER; // uL/min * 10
-int defaultFlowRate = DEFAULT_FLOW_RATE * FLOW_RATE_MULTIPLIER; // uL/min * 10
 int instantFlowRate = MIN_FLOW_RATE; // uL/min * 10
 int averageFlowRate = MIN_FLOW_RATE; // uL/min * 10
 int flowRateQueue[FLOW_RATE_QUEUE_SIZE]; // uL/min * 10
@@ -211,17 +174,12 @@ int prevIncrementTenState = HIGH;
 int prevDecrementTenState = HIGH;
 unsigned long lastUpdate = 0; // milliseconds
 unsigned long currentTime = 0; // milliseconds
-float Kp = 0.0; // unitless
-float Ki = 0.0; // unitless
-float Kd = 0.0; // unitless
 
 boolean pidActivated = true;
 boolean flowMeterConnected = false;
 
 LiquidCrystal lcd(LCD_RS, LCD_ENABLE, LCD_D4, LCD_D5, LCD_D6, LCD_D7);
-ASL1600 flowMeter;
-PID flowPID(Kp, Ki, Kd, MAX_DAC_NUMBER, MIN_DAC_NUMBER);
-SoftwareSerial cpuSerial(RX_PIN, TX_PIN);
+PID flowPID(K_P, K_I, K_D, MAX_DAC_NUMBER, MIN_DAC_NUMBER);
 
 void setup()
 { 
@@ -245,31 +203,15 @@ void setup()
   // Set the output voltage to zero to start
   writeDAC(MIN_DAC_NUMBER);
 
-  // Read default flow from EEPROM
-  float tempFlowRate = readEEPROMFloat(DF_ADDRESS);
-  defaultFlowRate = int(tempFlowRate * FLOW_RATE_MULTIPLIER);
-  targetFlowRate = defaultFlowRate;
-  
-  // Read and set the PID parameters from EEPROM
-  Kp = readEEPROMFloat(KP_ADDRESS);
-  Ki = readEEPROMFloat(KI_ADDRESS);
-  Kd = readEEPROMFloat(KD_ADDRESS);
-  flowPID.setKp(Kp);
-  flowPID.setKi(Ki);
-  flowPID.setKd(Kd);
-
   // Print some startup information to the user.
   // Naval Research Laboratory (NRL)
   // Pneumatically Modulated Liquid Delivery System (PMLDS)
-  lcd.print("NRL-PMLDS v3.0.2");
-  lcd.setCursor(0, 1);
-  lcd.print("Warming up");
-  
-  // Wait 3 seconds to allow the flow meter to warm up.
-  delay(3000);
-
+  lcd.print("NRL-PMLDS v4.0.0");
   lcd.setCursor(0, 1);
   lcd.print("Connecting");
+
+  // Delay 3 seconds to give the flow meter time to warm up.
+  delay(3000);
 
   /*
    If the flow meter and Arduino are turned on at the same time, the Arduino will check for connection
@@ -430,52 +372,35 @@ void loop()
     {
       String command = readSerialCommand();
 
-      if ( command.startsWith("TF") )
+      if ( command.startsWith("T") )
       {
-        if ( command.charAt(2) == SET_COMMAND )
+        if ( command.charAt(1) == SET_COMMAND )
         {         
-          targetFlowRate = readSerialFlowRate(command);
+          targetFlowRate = readSerialTargetFlowRate(command);
         }
-        else if ( command.charAt(2) == GET_COMMAND )
+        else if ( command.charAt(1) == GET_COMMAND )
         {
           writeSerialFlowRate(targetFlowRate);
         }
       }
-      else if ( command.startsWith("DF") )
+      else if ( command.startsWith("A") )
       {
-        if ( command.charAt(2) == SET_COMMAND )
-        {
-          // The default flow rate is stored as an integer times FLOW_RATE_MULTIPLIER (10)
-          defaultFlowRate = readSerialFlowRate(command);
-          
-          // Convert the default flow rate to a float because it is stored in EEPROM as a float
-          // NOT as an integer times the FLOW_RATE_MULTIPLIER.
-          float tempFlowRate = float(defaultFlowRate) / float(FLOW_RATE_MULTIPLIER);
-          writeEEPROMFloat(DF_ADDRESS, tempFlowRate);
-        }  
-        else if ( command.charAt(2) == GET_COMMAND )
-        {
-          writeSerialFlowRate(defaultFlowRate);  
-        }
-      }
-      else if ( command.startsWith("AF") )
-      {
-        if ( command.charAt(2) == SET_COMMAND )
+        if ( command.charAt(1) == SET_COMMAND )
         {
           // Nothing, cannot set the average flow rate.  
         }  
-        else if ( command.charAt(2) == GET_COMMAND )
+        else if ( command.charAt(1) == GET_COMMAND )
         {
           writeSerialFlowRate(averageFlowRate);
         }
       }
-      else if ( command.startsWith("IF") )
+      else if ( command.startsWith("I") )
       {
-        if ( command.charAt(2) == SET_COMMAND )
+        if ( command.charAt(1) == SET_COMMAND )
         {
           // Nothing, cannot set the instant flow rate.
         }
-        else if ( command.charAt(2) == GET_COMMAND )
+        else if ( command.charAt(1) == GET_COMMAND )
         {
           writeSerialFlowRate(instantFlowRate);
         }  
@@ -502,48 +427,6 @@ void loop()
           writeSerialPressure(dacNumber);
         }
       }
-      else if ( command.startsWith("KP") )
-      {
-        if ( command.charAt(2) == SET_COMMAND )
-        {
-          Kp = getCommandValue(command);
-          writeEEPROMFloat(KP_ADDRESS, Kp);
-          flowPID.setKp(Kp);
-        }
-        else if ( command.charAt(2) == GET_COMMAND )
-        {
-          String KpString = floatToString(Kp);
-          cpuSerial.println(KpString);
-        }
-      }
-      else if ( command.startsWith("KI") )
-      {
-        if ( command.charAt(2) == SET_COMMAND )
-        {
-          Ki = getCommandValue(command);
-          writeEEPROMFloat(KI_ADDRESS, Ki);
-          flowPID.setKi(Ki);
-        }
-        else if ( command.charAt(2) == GET_COMMAND )
-        {
-          String KiString = floatToString(Ki);
-          cpuSerial.println(KiString);
-        }      
-      }
-      else if ( command.startsWith("KD") )
-      {
-        if ( command.charAt(2) == SET_COMMAND )
-        {
-          Kd = getCommandValue(command);
-          writeEEPROMFloat(KD_ADDRESS, Kd);
-          flowPID.setKd(Kd);
-        }
-        else if ( command.charAt(2) == GET_COMMAND )
-        {
-          String KdString = floatToString(Kd);
-          cpuSerial.println(KdString);
-        }         
-      }
       else if ( command.startsWith("|") )
       {
         if ( command.charAt(1) == '|' )
@@ -555,62 +438,6 @@ void loop()
           startPID();
         }
       }
-    }
-  }
-}
-
-/*
-  Reads a float value from the EEPROM. A float value is four bytes long.
-  
-  @param initialAddress The start address of the four bytes in EEPROM memory of the float value.
-  @return The float value.
-*/
-float readEEPROMFloat(int initialAddress)
-{
-  int currentAddress = initialAddress;
-
-  union 
-  {
-    byte b[NUM_BYTES_PER_FLOAT];
-    float f;
-  } eepromValue;
-  
-  for (int i = 0; i < NUM_BYTES_PER_FLOAT; i++ )
-  {
-    eepromValue.b[i] = EEPROM.read(currentAddress);
-    currentAddress++;
-  }
-  
-  return eepromValue.f;
-}
-
-/*
-  Writes a float value to EEPROM. A float value is four bytes long. A write will only occur if
-  the value currently in EEPROM is different than the value to write to EEPROM. A check is 
-  conducted to minimize writes to EEPROM, which is limited by hardware to 100,000 cycles.
-  
-  @param intialAdress The start address of the four bytes in EEPROM memory of the float value.
-  @param floatValue The value as a float to write to EEPROM.
-*/
-void writeEEPROMFloat(int initialAddress, float floatValue)
-{
-  int currentAddress = initialAddress;
-  
-  union 
-  {
-    byte b[NUM_BYTES_PER_FLOAT];
-    float f;
-  } eepromValue;
-  
-  eepromValue.f = floatValue;
-  
-  float currentValue = readEEPROMFloat(initialAddress);
-  if ( currentValue != floatValue )
-  {  
-    for (int i = 0; i < NUM_BYTES_PER_FLOAT; i++ )
-    {
-      EEPROM.write(currentAddress, eepromValue.b[i]);
-      currentAddress++;
     }
   }
 }
@@ -650,11 +477,7 @@ String readSerialCommand()
 
 /*
   Read the voltage from the cpu serial buffer and set the DAC based on the voltage. The PID control
- must be paused. The digital-to-analog converter is set to a number based on the conversion of the
- control voltage to an integer number between 0 and 255.
- 
- @param command The command read from the serial buffer.
- @return The digital-to-analog converter number, which will be between 0 and MAX_DAC_NUMBER (255).
+ must be paused.
  
  @param command The command read from the serial buffer.
  @return The digital-to-analog converter number, which will be between 0 and MAX_DAC_NUMBER (255).
@@ -663,7 +486,7 @@ int readSerialVoltage(String command)
 {
   if ( !pidActivated )
   {
-    float voltage = getCommandValue(command);
+    float voltage = getSetValue(command);
     int dac = int((voltage / MAX_VOLTAGE) * MAX_DAC_NUMBER);
 
     dac = boundDACNumber(dac);
@@ -676,11 +499,7 @@ int readSerialVoltage(String command)
 
 /*
   Read the pressure from the cpu serial buffer and set the DAC based on the pressure. The PID control
- must be paused. The digital-to-analog converter is set to a number based on the conversion of the pressure
- in PSI to an integer number between 0 and 255.
- 
- @param command The command read from the serial buffer.
- @return The digital-to-analog converter number, which will be between 0 and MAX_DAC_NUMBER (255).
+ must be paused.
  
  @param command The command read from the serial buffer.
  @return The digital-to-analog converter number, which will be between 0 and MAX_DAC_NUMBER (255).
@@ -689,7 +508,7 @@ int readSerialPressure(String command)
 {
   if ( !pidActivated )
   {
-    float pressure = getCommandValue(command);
+    float pressure = getSetValue(command);
     int dac = int((pressure / MAX_PRESSURE) * MAX_DAC_NUMBER);
 
     dac = boundDACNumber(dac);
@@ -701,17 +520,14 @@ int readSerialPressure(String command)
 }
 
 /*
-  Reads a flow rate from the serial communication with the computer.
-  
-  @param command The command read from the serial buffer.
-  @return The flow rate in uL/min * FLOW_RATE_MULTIPLIER (10).
+  Read target flow rate from the serial communication with the computer.
   
   @param command The command read from the serial buffer.
   @return The flow rate in uL/min * FLOW_RATE_MULTIPLIER (10).
  */
-int readSerialFlowRate(String command)
+int readSerialTargetFlowRate(String command)
 {
-  int flowRate = int(getCommandValue(command) * FLOW_RATE_MULTIPLIER);
+  int flowRate = int(getSetValue(command) * FLOW_RATE_MULTIPLIER);
 
   flowRate = boundFlowRate(flowRate);
 
@@ -719,43 +535,26 @@ int readSerialFlowRate(String command)
 }
 
 /*
-  Gets the value to set a parameter from the command.
-  
-  @param command The command read from the serial buffer.
-  @return The value from a set command.
+  Gets the value to set a parameter by from the command.
   
   @param command The command read from the serial buffer.
   @return The value from a set command.
 */
-float getCommandValue(String command)
+float getSetValue(String command)
 {
-  unsigned int commandLength = command.length();
-  unsigned int bufferLength = commandLength + 1;
+  unsigned int bufferLength = command.length() - 1;
+  
   char buffer[bufferLength];
   
-  // All commands for setting a value have A=#### format, where "A" is replaced
-  // with one or two letters. To obtain just the number portion, we use a 
-  // substring starting at a position after the SET_COMMAND symbol (=), the first 
-  // digit of the number and convert it to a char array for use in the atof() function.
-  int commandValueIndex = 0;
-  while ( commandValueIndex < commandLength )
-  {
-    if ( command.charAt(commandValueIndex) == SET_COMMAND )
-    {
-      // We need to increment to the start of the value, if we omit this
-      // increment, it is the value plus the SET_COMMAND symbol (=)
-      commandValueIndex++;
-      break;  
-    }
-    
-    commandValueIndex++;
-  }
-  
-  String commandValue = command.substring(commandValueIndex); 
+  // All commands for setting a value flow the T=#### format, where "T" is replaced
+  // with either T, P, or V. To obtain just the number portion, we use a substring
+  // starting at position 2, the first digit of the number and convert it to a 
+  // char array for use in the atof() function.
+  String commandValue = command.substring(2);
   commandValue.toCharArray(buffer, bufferLength);
   
   float value = atof(buffer);
-  
+
   return value;
 }
 
@@ -943,7 +742,7 @@ void updateLCDFlowRate(int flowRate, int row)
   lcd.setCursor(4, row);
 
   // If the flow rate is less than 10 uL/min, print a space
-  if ( flowRate < (10 * FLOW_RATE_MULTIPLIER) )
+  if ( flowRate < 10.0 )
   {
     lcd.print(" ");
   }
@@ -965,7 +764,7 @@ void updateLCDFlowRate(int flowRate, int row)
 }
 
 /*
-  Updates the voltage on the LCD.
+  Update the voltage on the LCD.
   
   @param dacNumber The digital-to-analog number.
  */
@@ -1018,7 +817,7 @@ float convertDACtoPressure(int dac)
 
 /*
   Adds the flow rate to the queue and averages the values in the flow rate queue.
-    
+  
   @param flowRate The flow rate in uL/min * FLOW_RATE_MULTIPLIER.
   @return The rolling average flow rate in uL/min * FLOW_RATE_MULTIPLIER.
 */
@@ -1057,49 +856,23 @@ int getAverageFlowRate(int flowRate)
   return average;
 }
 
-/*
-  Converts a float value to an ASCII string in scientific notation using a captial "E" for
-  denoting the exponent.
-  
-  @param value The float value.
-  @return The ASCII string representation of the float value in scientific notation.
-*/
-String floatToString(float value)
-{ 
-  String strValue;
-  
-  // Use the absolute value of the float but remember it was negative to begin with
-  if ( value < 0 )
-  {
-    value = value * -1.0;  
-    strValue = "-";
-  }
-  
-  // Determin the exponent
-  int exponent = 0;
-  if ( value >= 10 )
-  {
-    while ( value >= 10 )
-    {
-      value = value / 10;
-      exponent++;
-    } 
-  }
-  else if ( (value > 0) && (value < 1) )
-  {
-    while ( value < 1 )
-    {
-      value = value * 10;
-      exponent--;  
-    }
-  }
-  
-  // Convert to integers the left and right of the decimal.
-  int leftOfDecimal = int(value);
-  int rightOfDecimal = int(value * 100);
-  rightOfDecimal = rightOfDecimal % 100;
-  
-  strValue = strValue + String(leftOfDecimal) + "." + String(rightOfDecimal) + "E" + String(exponent);
-  
-  return strValue;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
