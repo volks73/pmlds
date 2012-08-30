@@ -1,6 +1,0 @@
-***************************
-* NRL-PMLDS Firmware TODO *
-***************************
-
-- Add max and min pressure to EEPROM storage
-- Add serial commands to change the max and min pressure
