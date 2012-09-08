@@ -10,7 +10,7 @@ The order number and supplier are only recommendations. Most parts can be purcha
 == Standalone Variant 3.x.x ==
 
 || *Description* || *Qty* || *Part Number* || *Manufacturer* || *Order Number* || *Supplier* ||
-|| 4P4C Modular Jack PC mount || 1 || TM3RA-44(50) || Hirose Electric Co Ltd || H11254-ND || Digi-Key ||
+|| 4P4C Modular Jack PC mount || 1 || TM3RA-44(50) || Hirose Electric Co Ltd || H11254-ND || [http://www.digikey.com Digi-Key] ||
 || Arduino Microcontroller || 1	|| ATmega328P || Atmel || DEV-10524 || Sparkfun ||
 || RS-232 to TTL IC || 1 || MAX232CPE+ || Maxim || MAX232CPE+-ND || Digi-Key ||
 || 1-CH 8-Bit I2C DAC Chip SMD || 1 || MAX517BCSA+ || Maxim || MAX517BCSA+-ND || Digi-Key ||
