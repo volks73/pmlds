@@ -12,7 +12,8 @@ RS-232 to TTL IC					1	  	MAX232CPE+		Maxim				MAX232CPE+-ND		Digi-Key
 28-pin DIP Socket					1		1-390261-9		TE Connectivity			A100210-ND		Digi-Key
 16-pin DIP Socket					1		1-390261-4		TE Connectivity			A100206-ND		Digi-Key
 White on Black LCD					1		GDM1602K		Xiamen Ocular			LCD-00709		Sparkfun
-DB9 Male connector					2		G17S 090X 110 EU	Amphenol			5-747904-5-ND		Digi-Key
+DB9 Male connector					1		171-009-103L001		Norcomp Inc.			209ME-ND		Digi-Key
+DB Female connector					1		171-009-203L001		Norcomp Inc.			209FE-ND		Digi-Key
 24V to 9V voltage regulator				1		LM7809CT		Fairchild Semiconductor		LM7809CT-ND		Digi-Key
 TO-220 low profile heat sink				1		507302B00000G		Aavid Thermalloy		HS115-ND		Digi-Key
 TO-220 heat sink mount kit				1		4880G			Aavid Thermalloy		HS417-ND		Digi-Key
