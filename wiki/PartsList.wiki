@@ -7,7 +7,7 @@ This is a complete parts list for the hardware necessary to build a PMLDS. The l
 
 The order number and supplier are only recommendations. Most parts can be purchased from any supplier or distributor.
 
-== Standalone Variant v3.x.x ==
+== Standalone Variant 3.x.x ==
 
 || *Description* || *Qty* || *Part Number* || *Manufacturer* || *Order Number* || *Supplier* ||
 || 4P4C Modular Jack PC mount || 1 || TM3RA-44(50) || Hirose Electric Co Ltd || H11254-ND || Digi-Key ||
@@ -55,7 +55,7 @@ The order number and supplier are only recommendations. Most parts can be purcha
 || Connection housing 4-position with locking ramp || 1 || 22-01-3047 || Molex Connector Corporation || WM2002-ND || Digi-Key ||
 || Connection terminal female 22-30 AWG Tin || 15 || 08-50-0114 || Molex Connector Corporation || WM1114-ND || Digi-Key ||
 
-== Shield Variant v2.x.x ==
+== Shield Variant 2.x.x ==
 
 || *Description* || *Qty* || *Part Number* || *Manufacturer* || *Order Number* || *Supplier* ||
 || 4P4C Modular Jack PC Mount || 1 || TM3RA-44(50) || Hirose Electric Co Ltd || H11254-ND || Digi-Key ||
