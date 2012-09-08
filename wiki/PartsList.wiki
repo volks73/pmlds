@@ -7,7 +7,7 @@ This is a complete parts list for the hardware necessary to build a PMLDS. The l
 
 The order number and supplier are only recommendations. Most parts can be purchased from any supplier or distributor.
 
-== Standalone Variant v3.x.x. ==
+== Standalone Variant v3.x.x ==
 
 || *Description* || *Qty* || *Part Number* || *Manufacturer* || *Order Number* || *Supplier* ||
 || 4P4C Modular Jack PC mount || 1 || TM3RA-44(50) || Hirose Electric Co Ltd || H11254-ND || Digi-Key ||
