@@ -18,6 +18,7 @@ TO-220 low profile heat sink				1		507302B00000G		Aavid Thermalloy		HS115-ND		Di
 TO-220 heat sink mount kit				1		4880G			Aavid Thermalloy		HS417-ND		Digi-Key
 9V to 5V voltage regulator				1		LM2940-5.0		National Semiconductor		LM2940IMP-5.0CT-ND	Digi-Key
 Electronic Pressure Control Unit			1		OEM-EP			Parker Hannifin Corp.		990-005101-015		Parker Hannifin Corp.
+1000 uL/min Flow Meter					1		ASL1600			Sensirion AG			ASL1600			Sensirion, Inc.
 Bulkhead Union						2		P-440			Upchurch			P-440			IDEX Health & Science
 10K Ohm Through Hole Trim Pot				1		3296W-1-103LF		Bourns Inc.			3296W-103LF-ND		Digi-Key
 1 uF Through Hole Capacitor				5		C330C105K5R5TA		Kemet				399-4389-ND		Digi-Key
