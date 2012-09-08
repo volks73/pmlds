@@ -3,7 +3,7 @@
 
 = PMLDS Hardware Parts List =
 
-This is a complete parts list for the hardware necessary to build a PMLDS. The list is organized by variant (Shield or Standalone), but the majority of the hardware is the same for both variants. This list does not include in the printed circuit board (PCB), which must be obtained separating using the EAGLE schematic (.sch) and board (.brb) files. A copy of the parts list for each variant is included in the source code.
+This is a complete parts list for the hardware necessary to build a PMLDS. The list is organized by variant (Shield or Standalone), but the majority of the hardware is the same for both variants. This list does not include in the printed circuit board (PCB), which must be obtained separating using the EAGLE schematic (.sch) and board (.brb) files. A copy of the parts list for each variant is included in the source code. Note, the Standalone variant uses some surface mount devices (SMDs) instead of through hole parts like the Shield variant.
 
 The order number and supplier are only recommendations. Most parts can be purchased from any supplier or distributor.
 
@@ -12,12 +12,13 @@ The order number and supplier are only recommendations. Most parts can be purcha
 || *Description* || *Qty* || *Part Number* || *Manufacturer* || *Order Number* || *Supplier* ||
 || 4P4C Modular Jack PC mount || 1 || TM3RA-44(50) || Hirose Electric Co Ltd || H11254-ND || Digi-Key ||
 || Arduino Microcontroller || 1	|| ATmega328P || Atmel || DEV-10524 || Sparkfun ||
-|| RS-232 to TTL IC || 1 || MAX232CPE+ || Maxim || MAX232CPE+-ND Digi-Key ||
+|| RS-232 to TTL IC || 1 || MAX232CPE+ || Maxim || MAX232CPE+-ND || Digi-Key ||
 || 1-CH 8-Bit I2C DAC Chip SMD || 1 || MAX517BCSA+ || Maxim || MAX517BCSA+-ND || Digi-Key ||
 || 28-pin DIP Socket || 1 || 1-390261-9 || TE Connectivity || A100210-ND || Digi-Key ||
 || 16-pin DIP Socket || 1 || 1-390261-4 || TE Connectivity || A100206-ND || Digi-Key ||
 || White on Black LCD || 1 || GDM1602K || Xiamen Ocular || LCD-00709 || Sparkfun ||
-|| DB9 Male connector || 2 || G17S 090X 110 EU || Amphenol || 5-747904-5-ND || Digi-Key ||
+|| DB9 Male connector || 1 || 171-009-103L001 || Norcomp Inc. || 209ME-ND || Digi-Key ||
+|| DB Female connector || 1 || 171-009-203L001 || Norcomp Inc. || 209FE-ND || Digi-Key ||
 || 24V to 9V voltage regulator || 1 || LM7809CT || Fairchild Semiconductor || LM7809CT-ND || Digi-Key ||
 || TO-220 low profile heat sink || 1 || 507302B00000G || Aavid Thermalloy || HS115-ND || Digi-Key ||
 || TO-220 heat sink mount kit || 1 || 4880G || Aavid Thermalloy || HS417-ND || Digi-Key ||
@@ -48,6 +49,49 @@ The order number and supplier are only recommendations. Most parts can be purcha
 || 6 channel 4'' jumper cable || 2 || PRT-10366 || Sparkfun || PRT-10366 || Sparkfun ||
 || Connection header 2-position with friction lock || 1 || 22-27-2021 || Molex Connector Corporation || WM4111-ND || Digi-Key ||
 || Connection header 3-position with friction lock || 3	|| 22-27-2031 || Molex Connector Corporation ||	WM4112-ND || Digi-Key ||
+|| Connection header 4-position with friction lock || 1 || 22-27-2041 || Molex Connector Corporation || WM4113-ND || Digi-Key ||
+|| Connection housing 2-position with locking ramp || 1 || 22-01-3027 || Molex Connector Corporation || WM2000-ND || Digi-Key ||
+|| Connection housing 3-position with locking ramp || 3 || 22-01-3037 || Molex Connector Corporation || WM2001-ND || Digi-Key ||
+|| Connection housing 4-position with locking ramp || 1 || 22-01-3047 || Molex Connector Corporation || WM2002-ND || Digi-Key ||
+|| Connection terminal female 22-30 AWG Tin || 15 || 08-50-0114 || Molex Connector Corporation || WM1114-ND || Digi-Key ||
+
+== Shield Variant v2.x.x ==
+
+|| *Description* || *Qty* || *Part Number* || *Manufacturer* || *Order Number* || *Supplier* ||
+|| 4P4C Modular Jack PC Mount || 1 || TM3RA-44(50) || Hirose Electric Co Ltd || H11254-ND || Digi-Key ||
+|| Arduino Microcontroller || 1 || Uno || Arduino || DEV-1102 || Sparkfun ||
+|| RS-232 to TTL IC || 1 || MAX233CPP+G36 || Maxim || MAX233CP+G36-ND || Digi-Key ||
+|| 1-CH 8-Bit I2C DAC Chip || 1 || MAX517BCPA+ || Maxim || MAX517BCPA+-ND || Digi-Key ||
+|| 28-pin DIP Socket || 1 || 1-390261-9 || TE Connectivity || A100210-ND || Digi-Key ||
+|| 20-pin DIP Socket || 1 || 2-641612-1 || TE Connectivity || A24810-ND || Digi-Key ||
+|| 8-pin DIP Socket || 1 || 1-390261-2 || TE Connectivity || A100204-ND || Digi-Key ||
+|| White on Black LCD || 1 || GDM1602K || Xiamen Ocular || LCD-00709 || Sparkfun ||
+|| DB9 Male connector || 1 || 171-009-103L001 || Norcomp Inc. || 209ME-ND || Digi-Key ||
+|| DB Female connector || 1 || 171-009-203L001 || Norcomp Inc. || 209FE-ND || Digi-Key ||
+|| Power Inlet Connector || 1 || JR-101 || Multicomp || 97K2599 || Newark Electronics ||
+|| 24V to 9V voltage regulator || 1 || LM2940-9.0 || National Semiconductor || LM2940IMP-9.0CT-ND || Digi-Key ||
+|| 9V to 5V voltage regulator || 1 || LM2940-5.0 || National Semiconductor || LM2940IMP-5.0CT-ND || Digi-Key ||
+|| 24V 0.9A power supply || 1 || ZPSA20-24 || TDK-Lambda || 285-1749-ND || Digi-Key ||
+|| Electronic Pressure Control Unit || 1 || OEM-EP || Parker Hannifin Corp. || 990-005101-015 || Parker Hannifin Corp. ||
+|| 1000 uL/min Flow Meter || 1 || ASL1600 || Sensirion AG || ASL1600 || Sensirion, Inc. ||
+|| Bulkhead Union || 2 || P-440 || Upchurch || P-440 || IDEX Health & Science ||
+|| 22 uF Through Hole Capacitor || 2 || T350D226K006AT || Kemet || 399-3561-ND || Digi-Key ||
+|| 0.47 uF Through Hole Capacitor || 2 || T350B474K050AT || Kemet || 399-3552-ND || Digi-Key ||
+|| 20 pF Through Hole Capacitor || 2 || RPE5C2A200J2P1Z03B || Murata Electronics North America || 490-3637-ND || Digi-Key ||
+|| 0.1 uF Through Hole Capacitor || 2 || C315C104M5U5TA || Kemet || 399-4151-ND || Digi-Key ||
+|| 10 Ohm Through Hole Resistor || 1 || CFR-25JB-10R || Yageo || 10QBK-ND || Digi-Key ||
+|| 10K Ohm Through Hole Resistor || 7 || CFR-25JB-10K || Yageo || 10KQBK-ND || Digi-Key ||
+|| 2.2K Ohm Through Hole Resistor || 1 || MFR-25FBF-2K10 || Yageo || 2.10KXBK-ND || Digi-Key ||
+|| 220 Ohm Through Hole Resistor || 1 || CFR-25JB-220R || Yageo || 220QBK-ND || Digi-Key ||
+|| Toggle switch On-Off DPST || 1 || M2021SS1W03 || NKK Switches || M2021SS1W03-ND || Digi-Key ||
+|| Toggle switch Mom-Off-Mom SPDT || 2 || A105SYZQ04 || TE Connectivity || 450-1531-ND || Digi-Key ||
+|| 4 Pin Molex KK Connector Housing || 1 || 09-50-3041 || Molex || WM2102-ND || Digi-Key ||
+|| 3 Pin Molex KK Connector Housing || 1 || 09-50-7031 || Molex || WM1565-ND || Digi-Key ||
+|| Terminal crimp KK connector || 4 || 08-50-0107 || Molex || WM2301-ND || Digi-Key ||
+|| 4 x 5 x 3 in. Aluminum utility box || 1 || AU-1028 || Bud Industries || 377-1929-ND || Digi-Key ||
+|| 6 channel 4'' jumper cable || 2 || PRT-10366 || Sparkfun || PRT-10366 || Sparkfun ||
+|| Connection header 2-position with friction lock || 1 || 22-27-2021 || Molex Connector Corporation || WM4111-ND || Digi-Key ||
+|| Connection header 3-position with friction lock || 3 || 22-27-2031 || Molex Connector Corporation || WM4112-ND || Digi-Key ||
 || Connection header 4-position with friction lock || 1 || 22-27-2041 || Molex Connector Corporation || WM4113-ND || Digi-Key ||
 || Connection housing 2-position with locking ramp || 1 || 22-01-3027 || Molex Connector Corporation || WM2000-ND || Digi-Key ||
 || Connection housing 3-position with locking ramp || 3 || 22-01-3037 || Molex Connector Corporation || WM2001-ND || Digi-Key ||
