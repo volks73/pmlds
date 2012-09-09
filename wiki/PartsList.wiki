@@ -23,12 +23,13 @@ The order number and supplier are only recommendations. Most parts can be purcha
 || TO-220 low profile heat sink || 1 || 507302B00000G || Aavid Thermalloy || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=HS115-ND&x=0&y=0&cur=USD HS115-ND] || [http://www.digikey.com Digi-Key] ||
 || TO-220 heat sink mount kit || 1 || 4880G || Aavid Thermalloy || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=HS417-ND&x=0&y=0&cur=USD HS417-ND] || [http://www.digikey.com Digi-Key] ||
 || 9V to 5V voltage regulator || 1 || LM2940-5.0 || National Semiconductor || [http://www.digikey.com/product-detail/en/LM2940IMP-5.0%2FNOPB/LM2940IMP-5.0TR-ND/270714 LM2940IMP-5.0CT-ND] || [http://www.digikey.com Digi-Key] ||
-|| Electronic Pressure Control Unit || 1 || OEM-EP || Parker Hannifin Corp. || 990-005101-015 || [http://www.parker.com/ Parker Hannifin Corp.] ||
-|| 1000 uL/min Flow Meter || 1 || ASL1600 || Sensirion AG || ASL1600 || [http://www.sensirion.com/ Sensirion, Inc.] ||
-|| Bulkhead Union || 2 || P-440 || Upchurch || P-440 || [http://www.idex-hs.com/ IDEX Health & Science] ||
+|| Electronic Pressure Control Unit || 1 || OEM-EP || Parker Hannifin Corp. || [http://ph.parker.com/webapp/wcs/stores/servlet/Product1_10151_12051_14565_-1 990-005101-015] || [http://www.parker.com/ Parker Hannifin Corp.] ||
+|| 1000 uL/min Flow Meter || 1 || ASL1600 || Sensirion AG || [http://www.sensirion.com/en/products/liquid-flow-sensors/standard-flow-meters/flow-meter-asl1600/ ASL1600] || [http://www.sensirion.com/ Sensirion, Inc.] ||
+|| Bulkhead Union || 2 || P-440 || Upchruch || [http://www.idex-hs.com/products/2540/High-Pressure-Unions.aspx?ProductTypeID=1&ProductFamilyID=3 P-440] || [http://www.idex-hs.com/ IDEX Health & Science] ||
+|| Fittings || 1 || P884-x || Upchruch || [http://www.idex-hs.com/products/2553/Flat-Bottom-Fittings.aspx?ProductTypeID=1&ProductFamilyID=3 P-844x] || [http://www.idex-hs.com/ IDEX Health & Science ||
 || 10K Ohm Through Hole Trim Pot || 1 || 3296W-1-103LF || Bourns Inc. || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=3296W-103LF-ND&x=0&y=0&cur=USD 3296W-103LF-ND] || [http://www.digikey.com Digi-Key] ||
 || 1 uF Through Hole Capacitor || 5 || C330C105K5R5TA || Kemet || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=399-4389-ND&x=0&y=0&cur=USD 399-4389-ND] || [http://www.digikey.com Digi-Key] ||
-|| 22 uF Through Hole Capacitor || 2 ||	T350K226K035AT || Kemet || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=399-3595-ND&x=0&y=0&cur=USD 399-3595-ND || [http://www.digikey.com Digi-Key] ||
+|| 22 uF Through Hole Capacitor || 2 ||	T350K226K035AT || Kemet || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=399-3595-ND&x=0&y=0&cur=USD 399-3595-ND] || [http://www.digikey.com Digi-Key] ||
 || 0.47 uF Through Hole Capacitor || 2 || T350B474K050AT || Kemet || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=399-3552-ND&x=0&y=0&cur=USD 399-3552-ND] || [http://www.digikey.com Digi-Key] ||
 || 20 pF Through Hole Capacitor || 2 || RPE5C2A200J2P1Z03B || Murata Electronics || [http://www.digikey.com/product-detail/en/RPE5C1H200J2P1Z03B/490-3703-ND/946339 490-3703-ND] || [http://www.digikey.com Digi-Key] ||
 || 0.1 uF Through Hole Capacitor || 2 || C315C104M5U5TA || Kemet || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=399-4151-ND&x=0&y=0&cur=USD 399-4151-ND] || [http://www.digikey.com Digi-Key] ||
@@ -74,7 +75,8 @@ The order number and supplier are only recommendations. Most parts can be purcha
 || 24V 0.9A power supply || 1 || ZPSA20-24 || TDK-Lambda || 285-1749-ND || [http://www.digikey.com Digi-Key] ||
 || Electronic Pressure Control Unit || 1 || OEM-EP || Parker Hannifin Corp. || 990-005101-015 || [http://www.parker.com/ Parker Hannifin Corp.] ||
 || 1000 uL/min Flow Meter || 1 || ASL1600 || Sensirion AG || ASL1600 || [http://www.sensirion.com/ Sensirion, Inc.] ||
-|| Bulkhead Union || 2 || P-440 || Upchurch || P-440 || [http://www.idex-hs.com/ IDEX Health & Science] ||
+|| Bulkhead Union || 2 || P-440 || Upchruch || P-440 || [http://www.idex-hs.com/ IDEX Health & Science] ||
+|| Fittings || 1 || P884-x || Upchruch || [http://www.idex-hs.com/products/2553/Flat-Bottom-Fittings.aspx?ProductTypeID=1&ProductFamilyID=3 P-844x] || [http://www.idex-hs.com/ IDEX Health & Science ||
 || 22 uF Through Hole Capacitor || 2 || T350D226K006AT || Kemet || 399-3561-ND || [http://www.digikey.com Digi-Key] ||
 || 0.47 uF Through Hole Capacitor || 2 || T350B474K050AT || Kemet || 399-3552-ND || [http://www.digikey.com Digi-Key] ||
 || 20 pF Through Hole Capacitor || 2 || RPE5C2A200J2P1Z03B || Murata Electronics North America || 490-3637-ND || [http://www.digikey.com Digi-Key] ||
