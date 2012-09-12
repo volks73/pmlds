@@ -1,7 +1,7 @@
 #summary Creating GERBER files for PCB fabrication
 #labels Phase-Implementation
 
-= How to Create GERBER Files from EAGLE Files =
+= How to Create a GERBER File in EAGLE for PCB Fabrication =
 
 This How-to gives step-by-step instructions on converting the EAGLE board (.brb) and schematic (.sch) files into GERBER files, which are necessary for submission to a printed-circuit board (PCB) fabrication house, such as [http://www.4pcb.com Advanced Circuits].
 
