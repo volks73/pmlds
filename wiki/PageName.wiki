@@ -9,11 +9,15 @@ The majority of this content is paraphrased from Colin Karpfinger's [http://coli
 
 == Pre-CAM Checks ==
 
+Before processing the board in EAGLE, the circuit and board should be checked for errors and dimensions. The following list outlines some of the checks that should be conducted. None of these are necessarily required, but all are a good idea to prevent useless boards.
+
   # Print out a 1:1 scale of the board file and ensure all of the physical parts align with the footprints for each component on the board. This may be unnecessary, or excessive, but reasonable if this is the first time the board is to be fabricated. It is also recommended to order all of the parts for the board before ordering the board to avoid any surprises.
   # Conduct a Design Rule Check (DRC) in EAGLE. Review the results and fix any major mistakes. Please keep in mind many errors will be fixed automatically by the PCB fabrication house during submission.
   # Run the the Ratsnet command to ensure there are no left-over airwires and everything is connected. If successful, then the status message for the command will say, "Nothing to do!"
 
 == CAM Processing ==
+
+The following series of steps will process the board and create a series of files that make up a GERBER file. 
 
   # Click on the CAM Process button
   # Open the job file for the layers: File->Open->Job...->gerb274x.cam (2-layer) or gerb274x-4layer.cam (4-layer)
@@ -45,7 +49,7 @@ Note: The .l15 and .ly2 files only exist for 4-layer boards and may not be neces
 
 == GERBER File Organization ==
 
-After CAM processing, all of the necessary files will be created in the same folder as the EAGLE board (.brb) and schematic (.sch) files were located.
+A GERBER file is just a ZIP file with a series of text files with various file extensions. The CAM processor in EAGLE will create the necessary files in the same folder as the board (.brb) and schematic (.sch) files.
 
   # Create a new folder on the Desktop with the name of the board design or project name
   # Copy the files created in the CAM Processing section to the new folder on the Desktop. The board (.brb) and schematic (.sch) do not need to be included.
