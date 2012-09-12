@@ -7,7 +7,7 @@ This How-to gives step-by-step instructions on converting the EAGLE board (.brb)
 
 The majority of this content is paraphrased from Colin Karpfinger's [http://colinkarpfinger.com/blog/2010/ordering-pcbs-designed-with-eagle/ guide] for "Ordering PCBs Designed in EAGLE".
 
-== Check the Board Design ==
+== Pre-CAM Checks ==
 
   # Print out a 1:1 scale of the board file and ensure all of the physical parts align with the footprints for each component on the board. This may be unnecessary, or excessive, but reasonable if this is the first time the board is to be fabricated. It is also recommended to order all of the parts for the board before ordering the board to avoid any surprises.
   # Conduct a Design Rule Check (DRC) in EAGLE. Review the results and fix any major mistakes. Please keep in mind many errors will be fixed automatically by the PCB fabrication house during submission.
@@ -55,4 +55,5 @@ After CAM processing, all of the necessary files will be created in the same fol
   # Save the PNG file with the annotations and move it to the same folder as the other files created during the CAM processing
   # Zip the folder. [http://www.7-zip.org/ 7-zip] is a utility that is helpful for creating a ZIP file from a folder.
   # Open the ZIP file in a GERBER viewer program, such as [http://gerbv.sourceforge.net/ GerbV], and make sure the board matches the design in EAGLE. The board in the GERBER viewer is the exact version the PCB fabrication house will fabricate. Make sure all of the layers are present, otherwise any missing layers will not be fabricated.
-  # Once the double-check with the GERBER viewer program is completed, the ZIP folder is now ready for submission to a PCB fabrication house.
+ 
+Once the double-check with the GERBER viewer program is completed, the ZIP folder is now ready for submission to a PCB fabrication house.
