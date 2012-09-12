@@ -7,7 +7,7 @@ This How-to gives step-by-step instructions on converting EAGLE board (.brb) and
 The majority of this content is paraphrased from Colin Karpfinger's [http://colinkarpfinger.com/blog/2010/ordering-pcbs-designed-with-eagle/ guide] for "Ordering PCBs Designed in EAGLE".
 
 
-== Pre-CAM Checks ==
+== Pre-CAM Processing Checks ==
 
 Before processing the board in EAGLE, the circuit and board should be checked for errors and dimensions. The following list outlines some of the checks that should be conducted. None of these are necessarily required, but all are a good idea to prevent useless boards.
 
