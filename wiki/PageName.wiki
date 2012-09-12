@@ -32,21 +32,21 @@ After CAM processing, all of the necessary files will be created in the same fol
   # Copy the files with the following extensions into the new folder:
 
 || *File Extension* || *Description/Type* || *Polarity* || *Layer ID* ||
-|| .cmp || Top Copper ||
-|| .crc || Drawing/Other ||
-|| .crs || Drawing/Other ||
-|| .drd || NC Drill ||
-|| .dri || Drawing/Other ||
-|| .gpi || Drawing/Other ||
+|| .cmp || Top Copper || N/A || N/A ||
+|| .crc || Drawing/Other || N/A || N/A ||
+|| .crs || Drawing/Other || N/A || N/A ||
+|| .drd || NC Drill || N/A || N/A ||
+|| .dri || Drawing/Other || N/A || N/A ||
+|| .gpi || Drawing/Other || N/A || N/A ||
 || .l15 || Inner Copper || Positive Polarity || Layer 2 ||
 || .ly2 || Inner Copper || Positive Polarity || Layer 3 ||
-|| .plc || Top Silkscreen ||
-|| .pls || Drawing/Other ||
-|| .sol || Bottom Copper ||
-|| .stc || Top Solder Mask ||
-|| .sts || Bottom Solder Mask ||
+|| .plc || Top Silkscreen || N/A || N/A ||
+|| .pls || Drawing/Other || N/A || N/A ||
+|| .sol || Bottom Copper || N/A || N/A ||
+|| .stc || Top Solder Mask || N/A || N/A ||
+|| .sts || Bottom Solder Mask || N/A || N/A ||
 
-Note: The .l15 and .ly2 files only exist for 4-layer boards and may not be necessary.
+Note: The .l15 and .ly2 files only exist for 4-layer boards and may not be necessary. If inner layers exist, then the polarity and layer order/ID must be explicitly chosen. All other layers are handled automatically.
 
   # Create a PNG file of the board: File->Export...->Image
   # Select a file name and save to the Desktop
