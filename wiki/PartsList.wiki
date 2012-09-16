@@ -61,6 +61,13 @@ The order number and supplier are only recommendations. Most parts can be purcha
 || 24V, 0.75A power supply adapter || 1 || EMSA240075K-P5P-SZ || CUI, Inc. || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=T1112-P5P-ND&x=0&y=0&cur=USD T1112-P5P-ND] || [http://www.digikey.com Digi-Key] ||
 || AC inlet blade for US || 1 || EMS-US || CUI, Inc. ||	[http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=T1123-US-ND&x=0&y=0&cur=USD T1123-US-ND] || [http://www.digikey.com Digi-Key] ||
 || 6 channel 4'' jumper cable || 2 || PRT-10366 || Sparkfun || [https://www.sparkfun.com/products/10366 PRT-10366] || [http://www.sparkfun.com Sparkfun] ||
+|| Black 22 AWG 7 stranded hook up wire || 100 ft || 3051 BK005 || Alpha Wire || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=A2016B-100-ND&x=0&y=0&cur=USD A2016B-100-ND] || [http://www.digikey.com Digi-Key] ||
+|| Red 22 AWG 7 stranded hook up wire || 100 ft || 3051 RD005 || Alpha Wire || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=A2016R-
+100-ND&x=0&y=0&cur=USD A2016R-100-ND] || [http://www.digikey.com Digi-Key] ||
+|| Orange 22 AWG 7 stranded hook up wire || 100 ft || 3051 OR005 || Alpha Wire || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=A2016A-100-ND&x=0&y=0&cur=USD A2016A-100-ND] || [http://www.digikey.com Digi-Key] ||
+|| Yellow 22 AWG 7 stranded hook up wire || 100 ft || 3051 YL005 || Alpha Wire || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=A2016Y-100-ND&x=0&y=0&cur=USD A2016Y-100-ND] || [http://www.digikey.com Digi-Key] ||
+|| Purple 22 AWG 7 stranded hook up wire || 100 ft || 3051 VI005 || Alpha Wire || http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=A2016V-100-ND&x=0&y=0&cur=USD A2016V-100-ND] || [http://www.digikey.com Digi-Key] ||
+|| Blue 22 AWG 7 stranded hook up wire || 100 ft || 3051 BL005 || Alpha Wire || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=A2016L-100-ND&x=0&y=0&cur=USD A2016L-100-ND] || [http://www.digikey.com Digi-Key] ||
 
 == Shield Variant 2.x.x ==
 
@@ -106,8 +113,15 @@ The order number and supplier are only recommendations. Most parts can be purcha
 || 3 Pin Molex KK Connector Housing || 1 || 09-50-7031 || Molex || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=WM1565-ND&x=0&y=0&cur=USD WM1565-ND] || [http://www.digikey.com Digi-Key] ||
 || Terminal crimp KK connector || 4 || 08-50-0107 || Molex || [http://www.digikey.com/product-detail/en/0008500108/WM2301-ND/26479 WM2301-ND] || [http://www.digikey.com Digi-Key] ||
 || 4 x 5 x 3 in. Aluminum utility box || 1 || AU-1028 || Bud Industries || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=377-1929-ND&x=0&y=0&cur=USD 377-1929-ND] || [http://www.digikey.com Digi-Key] ||
-|| 6 channel 4'' jumper cable || 2 || PRT-10366 || Sparkfun || [https://www.sparkfun.com/products/10366 PRT-10366] || [http://www.sparkfun.com Sparkfun] ||
 || Connection housing 2-position with locking ramp || 1 || 22-01-3027 || Molex Connector Corporation || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=WM2000-ND&x=0&y=0&cur=USD WM2000-ND] || [http://www.digikey.com Digi-Key] ||
 || Connection housing 3-position with locking ramp || 3 || 22-01-3037 || Molex Connector Corporation || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=WM2001-ND&x=0&y=0&cur=USD WM2001-ND] || [http://www.digikey.com Digi-Key] ||
 || Connection housing 4-position with locking ramp || 1 || 22-01-3047 || Molex Connector Corporation || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=WM2002-ND&x=0&y=0&cur=USD WM2002-ND] || [http://www.digikey.com Digi-Key] ||
 || Connection terminal female 22-30 AWG Tin || 15 || 08-50-0114 || Molex Connector Corporation || [http://www.digikey.com/product-detail/en/0008500114/WM1114-ND/26475 WM1114-ND] || [http://www.digikey.com Digi-Key] ||
+|| 6 channel 4'' jumper cable || 2 || PRT-10366 || Sparkfun || [https://www.sparkfun.com/products/10366 PRT-10366] || [http://www.sparkfun.com Sparkfun] ||
+|| Black 22 AWG 7 stranded hook up wire || 100 ft || 3051 BK005 || Alpha Wire || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=A2016B-100-ND&x=0&y=0&cur=USD A2016B-100-ND] || [http://www.digikey.com Digi-Key] ||
+|| Red 22 AWG 7 stranded hook up wire || 100 ft || 3051 RD005 || Alpha Wire || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=A2016R-
+100-ND&x=0&y=0&cur=USD A2016R-100-ND] || [http://www.digikey.com Digi-Key] ||
+|| Orange 22 AWG 7 stranded hook up wire || 100 ft || 3051 OR005 || Alpha Wire || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=A2016A-100-ND&x=0&y=0&cur=USD A2016A-100-ND] || [http://www.digikey.com Digi-Key] ||
+|| Yellow 22 AWG 7 stranded hook up wire || 100 ft || 3051 YL005 || Alpha Wire || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=A2016Y-100-ND&x=0&y=0&cur=USD A2016Y-100-ND] || [http://www.digikey.com Digi-Key] ||
+|| Purple 22 AWG 7 stranded hook up wire || 100 ft || 3051 VI005 || Alpha Wire || http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=A2016V-100-ND&x=0&y=0&cur=USD A2016V-100-ND] || [http://www.digikey.com Digi-Key] ||
+|| Blue 22 AWG 7 stranded hook up wire || 100 ft || 3051 BL005 || Alpha Wire || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=A2016L-100-ND&x=0&y=0&cur=USD A2016L-100-ND] || [http://www.digikey.com Digi-Key] ||
