@@ -43,7 +43,7 @@ The order number and supplier are only recommendations. Most parts can be purcha
 || *Description* || *Qty* || *Part Number* || *Manufacturer* || *Order Number* || *Supplier* ||
 || White on Black LCD || 1 || GDM1602K || Xiamen Ocular || [https://www.sparkfun.com/products/709? LCD-00709] || [http://www.sparkfun.com Sparkfun] ||
 || DB9 Male connector || 1 || 171-009-103L001 || Norcomp Inc. || [http://www.digikey.com/product-detail/en/171-009-103L001/209ME-ND/858099 209ME-ND] || [http://www.digikey.com Digi-Key] ||
-|| DB Female connector || 1 || 171-009-203L001 || Norcomp Inc. || [http://www.digikey.com/product-detail/en/171-009-203L001/209FE-ND/858108 209FE-ND] || [http://www.digikey.com Digi-Key] ||
+|| DB9 Female connector || 1 || 171-009-203L001 || Norcomp Inc. || [http://www.digikey.com/product-detail/en/171-009-203L001/209FE-ND/858108 209FE-ND] || [http://www.digikey.com Digi-Key] ||
 || Electronic Pressure Control Unit || 1 || OEM-EP || Parker Hannifin Corp. || [http://ph.parker.com/webapp/wcs/stores/servlet/Product1_10151_12051_14565_-1 990-005101-015] || [http://www.parker.com/ Parker Hannifin Corp.] ||
 || 1000 uL/min Flow Meter || 1 || ASL1600 || Sensirion AG || [http://www.sensirion.com/en/products/liquid-flow-sensors/standard-flow-meters/flow-meter-asl1600/ ASL1600] || [http://www.sensirion.com/ Sensirion, Inc.] ||
 || Bulkhead Union || 2 || P-440 || Upchruch || [http://www.idex-hs.com/products/ProductImage.aspx?ProductImageID=1875 P-440] || [http://www.idex-hs.com/ IDEX Health & Science] ||
@@ -52,9 +52,6 @@ The order number and supplier are only recommendations. Most parts can be purcha
 || FEP 1/16 in. OD, 0.030 in. ID plastic tubing || 10 ft || 1522 || Upchruch || [http://www.idex-hs.com/products/ProductImage.aspx?ProductImageID=539 1522] || [http://www.idex-hs.com/ IDEX Health & Science] ||
 || Toggle switch On-Off DPST ||	1 || M2021SS1W03 || NKK Switches || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=M2021SS1W03-ND&x=0&y=0&cur=USD M2021SS1W03-ND] || [http://www.digikey.com Digi-Key] ||
 || Toggle switch Mom-Off-Mom SPDT || 2 || A105SYZQ04 || TE Connectivity || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=450-1531-ND&x=0&y=0&cur=USD 450-1531-ND] || [http://www.digikey.com Digi-Key] ||
-|| 4 Pin Molex KK Connector Housing || 1 || 09-50-3041 || Molex || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=WM2102-ND&x=0&y=0&cur=USD WM2102-ND] || [http://www.digikey.com Digi-Key] ||
-|| 3 Pin Molex KK Connector Housing || 1 || 09-50-7031 || Molex || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=WM1565-ND&x=0&y=0&cur=USD WM1565-ND] || [http://www.digikey.com Digi-Key] ||
-|| Terminal crimp KK connector || 4 || 08-50-0107 || Molex || [http://www.digikey.com/product-detail/en/0008500108/WM2301-ND/26479 WM2301-ND] || [http://www.digikey.com Digi-Key] ||
 || Connection housing 2-position with locking ramp || 1 || 22-01-3027 || Molex Connector Corporation || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=WM2000-ND&x=0&y=0&cur=USD WM2000-ND] || [http://www.digikey.com Digi-Key] ||
 || Connection housing 3-position with locking ramp || 3 || 22-01-3037 || Molex Connector Corporation || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=WM2001-ND&x=0&y=0&cur=USD WM2001-ND] || [http://www.digikey.com Digi-Key] ||
 || Connection housing 4-position with locking ramp || 1 || 22-01-3047 || Molex Connector Corporation || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=WM2002-ND&x=0&y=0&cur=USD WM2002-ND] || [http://www.digikey.com Digi-Key] ||
@@ -67,31 +64,42 @@ The order number and supplier are only recommendations. Most parts can be purcha
 
 == Shield Variant 2.x.x ==
 
+=== Printed Circuit Board Components ===
+
 || *Description* || *Qty* || *Part Number* || *Manufacturer* || *Order Number* || *Supplier* ||
 || 4P4C Modular Jack PC Mount || 1 || TM3RA-44(50) || Hirose Electric Co Ltd || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=H11254-ND&x=13&y=15&cur=USD H11254-ND] || [http://www.digikey.com Digi-Key] ||
 || Arduino Microcontroller || 1 || Uno || Arduino || [https://www.sparkfun.com/products/11021 DEV-1102] || [http://www.sparkfun.com Sparkfun] ||
 || RS-232 to TTL IC || 1 || MAX232CPE+ || Maxim || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=MAX232CPE%2B-ND&x=0&y=0&cur=USD MAX232CPE+-ND] || [http://www.digikey.com Digi-Key] ||
 || 1-CH 8-Bit I2C DAC Chip || 1 || MAX517BCPA+ || Maxim || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=MAX517BCPA%2B-ND&x=0&y=0&cur=USD MAX517BCPA+-ND] || [http://www.digikey.com Digi-Key] ||
-|| 28-pin DIP Socket || 1 || 1-390261-9 || TE Connectivity || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=A100210-ND&x=0&y=0&cur=USD A100210-ND] || [http://www.digikey.com Digi-Key] ||
 || 16-pin DIP Socket || 1 || 1-390261-4 || TE Connectivity || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=A100206-ND&x=0&y=0&cur=USD A100206-ND] || [http://www.digikey.com Digi-Key] ||
 || 8-pin DIP Socket || 1 || 1-390261-2 || TE Connectivity || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=A100204-ND&x=0&y=0&cur=USD A100204-ND] || [http://www.digikey.com Digi-Key] ||
+|| 0.1 uF Through Hole Capacitor || 3 || C315C104M5U5TA || Kemet || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=399-4151-ND&x=12&y=14&cur=USD 399-4151-ND] || [http://www.digikey.com Digi-Key] ||
+|| 1 uF Through Hole Capacitor || 5 || C330C105K5R5TA || Kemet || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=399-4389-ND&x=0&y=0&cur=USD 399-4389-ND] || [http://www.digikey.com Digi-Key] ||
+|| 0.33 uF Through Hole Capacitor || 1 || C320C334M5U5TA || Kemet || [http://www.digikey.com/product-detail/en/C320C334M5U5TA/399-4299-ND/818075 399-4299-ND] || [http://www.digikey.com Digi-Key] ||
+|| 10 Ohm Through Hole Resistor || 1 || CFR-25JB-10R || Yageo || [http://www.digikey.com/product-detail/en/CFR-25JB-52-10R/10QBK-ND/340 10QBK-ND] || [http://www.digikey.com Digi-Key] ||
+|| 10K Ohm Through Hole Resistor || 6 || CFR-25JB-10K || Yageo || [http://www.digikey.com/product-detail/en/CFR-25JB-52-10K/10KQBK-ND/338 10KQBK-ND] || [http://www.digikey.com Digi-Key] ||
+|| 2.2K Ohm Through Hole Resistor || 1 || MFR-25FBF-2K10 || Yageo || [http://www.digikey.com/product-detail/en/MFR-25FBF-2K10/2.10KXBK-ND/13074 2.10KXBK-ND] || [http://www.digikey.com Digi-Key] ||
+|| Connection header 2-position with friction lock || 1 || 22-27-2021 || Molex Connector Corporation || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=WM4111-ND&x=0&y=0&cur=USD WM4111-ND] || [http://www.digikey.com Digi-Key] ||
+|| Connection header 3-position with friction lock || 4 || 22-27-2031 || Molex Connector Corporation || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=WM4112-ND&x=0&y=0&cur=USD WM4112-ND] || [http://www.digikey.com Digi-Key] ||
+|| Connection header 4-position with friction lock || 1 || 22-27-2041 || Molex Connector Corporation || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=WM4113-ND&x=0&y=0&cur=USD WM4113-ND] || [http://www.digikey.com Digi-Key] ||
+|| 36-position header pins || 2 || 68001-436HLF || FCI || [http://www.digikey.com/product-search/en?x=0&y=0&lang=en&site=us&KeyWords=609-2224-ND 609-2224-ND] || [http://www.digikey.com Digi-Key] ||
+|| 2-position jumper || 2 || S9001-ND || Sullins Connector Solutions || [http://www.digikey.com/product-detail/en/SPC02SYAN/S9001-ND/76375 S9001-ND] || [http://www.digikey.com Digi-Key] ||
+
+=== Project Box Components ===
+
+|| *Description* || *Qty* || *Part Number* || *Manufacturer* || *Order Number* || *Supplier* ||
 || White on Black LCD || 1 || GDM1602K || Xiamen Ocular || [https://www.sparkfun.com/products/709 LCD-00709] || [http://www.sparkfun.com Sparkfun] ||
 || DB9 Male connector || 1 || 171-009-103L001 || Norcomp Inc. || [http://www.digikey.com/product-detail/en/171-009-103L001/209ME-ND/858099 209ME-ND] || [http://www.digikey.com Digi-Key] ||
-|| DB Female connector || 1 || 171-009-203L001 || Norcomp Inc. || [http://www.digikey.com/product-detail/en/171-009-203L001/209FE-ND/858108 209FE-ND] || [http://www.digikey.com Digi-Key] ||
+|| DB9 Female connector || 1 || 171-009-203L001 || Norcomp Inc. || [http://www.digikey.com/product-detail/en/171-009-203L001/209FE-ND/858108 209FE-ND] || [http://www.digikey.com Digi-Key] ||
 || Power Inlet Connector || 1 || JR-101 || Multicomp || [http://www.newark.com/multicomp/jr-101/iec-power-connector-plug-10-a/dp/97K2599?Ntt=97K2599 97K2599] || [http://www.newark.com/ Newark Electronics] ||
 || 24V 0.9A power supply || 1 || ZPSA20-24 || TDK-Lambda || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=285-1749-ND&x=0&y=0&cur=USD 285-1749-ND] || [http://www.digikey.com Digi-Key] ||
 || 24 V to 9 V voltage regulator || 1 || LM7809CT || Fairchild Semiconductor || [http://www.digikey.com/product-detail/en/LM7809CT/LM7809CT-ND/1923049 LM7809CT] || [http://www.digikey.com Digi-Key] ||
 || Electronic Pressure Control Unit || 1 || OEM-EP || Parker Hannifin Corp. || [http://ph.parker.com/webapp/wcs/stores/servlet/Product1_10151_12051_14565_-1 990-005101-015] || [http://www.parker.com/ Parker Hannifin Corp.] ||
 || 1000 uL/min Flow Meter || 1 || ASL1600 || Sensirion AG || [http://www.sensirion.com/en/products/liquid-flow-sensors/standard-flow-meters/flow-meter-asl1600/ ASL1600] || [http://www.sensirion.com/ Sensirion, Inc.] ||
-|| Bulkhead Union || 2 || P-440 || Upchruch || [http://www.idex-hs.com/products/2540/High-Pressure-Unions.aspx?ProductTypeID=1&ProductFamilyID=3 P-440] || [http://www.idex-hs.com/ IDEX Health & Science] ||
-|| Fittings || 1 || P884-x || Upchruch || [http://www.idex-hs.com/products/2553/Flat-Bottom-Fittings.aspx?ProductTypeID=1&ProductFamilyID=3 P-844x] || [http://www.idex-hs.com/ IDEX Health & Science] ||
-|| 22 uF Through Hole Capacitor || 2 || T350D226K006AT || Kemet || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=399-3561-ND&x=0&y=0&cur=USD 399-3561-ND] || [http://www.digikey.com Digi-Key] ||
-|| 0.47 uF Through Hole Capacitor || 2 || T350B474K050AT || Kemet || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=399-3552-ND&x=0&y=0&cur=USD 399-3552-ND] || [http://www.digikey.com Digi-Key] ||
-|| 0.1 uF Through Hole Capacitor || 2 || C315C104M5U5TA || Kemet || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=399-4151-ND&x=12&y=14&cur=USD 399-4151-ND] || [http://www.digikey.com Digi-Key] ||
-|| 10 Ohm Through Hole Resistor || 1 || CFR-25JB-10R || Yageo || [http://www.digikey.com/product-detail/en/CFR-25JB-52-10R/10QBK-ND/340 10QBK-ND] || [http://www.digikey.com Digi-Key] ||
-|| 10K Ohm Through Hole Resistor || 7 || CFR-25JB-10K || Yageo || [http://www.digikey.com/product-detail/en/CFR-25JB-52-10K/10KQBK-ND/338 10KQBK-ND] || [http://www.digikey.com Digi-Key] ||
-|| 2.2K Ohm Through Hole Resistor || 1 || MFR-25FBF-2K10 || Yageo || [http://www.digikey.com/product-detail/en/MFR-25FBF-2K10/2.10KXBK-ND/13074 2.10KXBK-ND] || [http://www.digikey.com Digi-Key] ||
-|| 220 Ohm Through Hole Resistor || 1 || CFR-25JB-220R || Yageo || [http://www.digikey.com/product-detail/en/CFR-25JB-52-220R/220QBK-ND/1295 220QBK-ND] || [http://www.digikey.com Digi-Key] ||
+|| Bulkhead Union || 2 || P-440 || Upchruch || [http://www.idex-hs.com/products/ProductImage.aspx?ProductImageID=1875 P-440] || [http://www.idex-hs.com/ IDEX Health & Science] ||
+|| 10-32 Coned Tubing Nuts || 2 || F-331 || Upchruch || [http://www.idex-hs.com/products/ProductImage.aspx?ProductImageID=1326 F-331x] || [http://www.idex-hs.com/ IDEX Health & Science] ||
+|| 10-32 Flat Vacuum Nuts || 2 || P-844 || Upchruch || [http://www.idex-hs.com/products/ProductImage.aspx?ProductImageID=2123 P-844x] || [http://www.idex-hs.com/ IDEX Health & Science] ||
+|| FEP 1/16 in. OD, 0.030 in. ID plastic tubing || 10 ft || 1522 || Upchruch || [http://www.idex-hs.com/products/ProductImage.aspx?ProductImageID=539 1522] || [http://www.idex-hs.com/ IDEX Health & Science] ||
 || Toggle switch On-Off DPST || 1 || M2021SS1W03 || NKK Switches || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=M2021SS1W03-ND&x=0&y=0&cur=USD M2021SS1W03-ND] || [http://www.digikey.com Digi-Key] ||
 || Toggle switch Mom-Off-Mom SPDT || 2 || A105SYZQ04 || TE Connectivity || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=450-1531-ND&x=0&y=0&cur=USD 450-1531-ND] || [http://www.digikey.com Digi-Key] ||
 || 4 Pin Molex KK Connector Housing || 1 || 09-50-3041 || Molex || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=WM2102-ND&x=0&y=0&cur=USD WM2102-ND] || [http://www.digikey.com Digi-Key] ||
@@ -99,9 +107,6 @@ The order number and supplier are only recommendations. Most parts can be purcha
 || Terminal crimp KK connector || 4 || 08-50-0107 || Molex || [http://www.digikey.com/product-detail/en/0008500108/WM2301-ND/26479 WM2301-ND] || [http://www.digikey.com Digi-Key] ||
 || 4 x 5 x 3 in. Aluminum utility box || 1 || AU-1028 || Bud Industries || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=377-1929-ND&x=0&y=0&cur=USD 377-1929-ND] || [http://www.digikey.com Digi-Key] ||
 || 6 channel 4'' jumper cable || 2 || PRT-10366 || Sparkfun || [https://www.sparkfun.com/products/10366 PRT-10366] || [http://www.sparkfun.com Sparkfun] ||
-|| Connection header 2-position with friction lock || 1 || 22-27-2021 || Molex Connector Corporation || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=WM4111-ND&x=0&y=0&cur=USD WM4111-ND] || [http://www.digikey.com Digi-Key] ||
-|| Connection header 3-position with friction lock || 3 || 22-27-2031 || Molex Connector Corporation || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=WM4112-ND&x=0&y=0&cur=USD WM4112-ND] || [http://www.digikey.com Digi-Key] ||
-|| Connection header 4-position with friction lock || 1 || 22-27-2041 || Molex Connector Corporation || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=WM4113-ND&x=0&y=0&cur=USD WM4113-ND] || [http://www.digikey.com Digi-Key] ||
 || Connection housing 2-position with locking ramp || 1 || 22-01-3027 || Molex Connector Corporation || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=WM2000-ND&x=0&y=0&cur=USD WM2000-ND] || [http://www.digikey.com Digi-Key] ||
 || Connection housing 3-position with locking ramp || 3 || 22-01-3037 || Molex Connector Corporation || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=WM2001-ND&x=0&y=0&cur=USD WM2001-ND] || [http://www.digikey.com Digi-Key] ||
 || Connection housing 4-position with locking ramp || 1 || 22-01-3047 || Molex Connector Corporation || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=WM2002-ND&x=0&y=0&cur=USD WM2002-ND] || [http://www.digikey.com Digi-Key] ||
