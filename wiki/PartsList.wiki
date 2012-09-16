@@ -72,15 +72,15 @@ The order number and supplier are only recommendations. Most parts can be purcha
 
 || *Description* || *Qty* || *Part Number* || *Manufacturer* || *Order Number* || *Supplier* ||
 || Screw lock kit for D-sub panel mount || 2 || 20418-0002 || ITT Cannon, LLC || [http://www.digikey.com/product-detail/en/020418-0002/1003-1036-ND/2403812 1003-1036-ND] || [http://www.digikey.com Digi-Key] ||
-|| M2x16 machine screw || 4 || 92005A037 || McMaster-Carr || [http://www.mcmaster.com/92005A037 92005A037] || [http://www.mcmaster.com McMaster-Carr] ||
-|| M3x10 machine screw || 2 || 92005A120 || McMaster-Carr || [http://www.mcmaster.com/92005A120 92005A120] || [http://www.mcmaster.com McMaster-Carr] ||
-|| 4-40 machine screw || 2 || 92949A106 || McMaster-Carr || [http://www.mcmaster.com/92949A106 92949A106] || [http://www.mcmaster.com McMaster-Carr] ||
-|| #6 self tapping hex washer head || 4 || 90286A144 || McMaster-Carr || [http://www.mcmaster.com/90286A144 90286A144] || [http://www.mcmaster.com McMaster-Carr] ||
-|| M2 nut || 4 || 90591A111 || McMaster-Carr || [http://www.mcmaster.com/90591A111 90591A111] || [http://www.mcmaster.com McMaster-Carr] ||
-|| M2 washer || 8 || 91166A180 || McMaster-Carr || [http://www.mcmaster.com/91166A180 91166A180] || [http://www.mcmaster.com McMaster-Carr] ||
-|| M3 washer || 2 || 91166A210 || McMaster-Carr || [http://www.mcmaster.com/91166A210 91166A210] || [http://www.mcmaster.com McMaster-Carr] ||
-|| 4-40 washer || 2 || 94744A155 || McMaster-Carr || [http://www.mcmaster.com/94744A155 94744A155] || [http://www.mcmaster.com McMaster-Carr] ||
-|| 1/8 in. nylon spacers || 2 || 94639A299 || McMaster-Carr || [http://www.mcmaster.com/94639A299 94639A299] || [http://www.mcmaster.com McMaster-Carr] ||
+|| M2x16 machine screw || 4 || 92005A037 || McMaster Carr || [http://www.mcmaster.com/92005A037 92005A037] || [http://www.mcmaster.com McMaster-Carr] ||
+|| M3x10 machine screw || 2 || 92005A120 || McMaster Carr || [http://www.mcmaster.com/92005A120 92005A120] || [http://www.mcmaster.com McMaster-Carr] ||
+|| 4-40 machine screw || 2 || 92949A106 || McMaster Carr || [http://www.mcmaster.com/92949A106 92949A106] || [http://www.mcmaster.com McMaster-Carr] ||
+|| #6 self tapping hex washer head || 4 || 90286A144 || McMaster Carr || [http://www.mcmaster.com/90286A144 90286A144] || [http://www.mcmaster.com McMaster-Carr] ||
+|| M2 nut || 4 || 90591A111 || McMaster Carr || [http://www.mcmaster.com/90591A111 90591A111] || [http://www.mcmaster.com McMaster-Carr] ||
+|| M2 washer || 8 || 91166A180 || McMaster Carr || [http://www.mcmaster.com/91166A180 91166A180] || [http://www.mcmaster.com McMaster-Carr] ||
+|| M3 washer || 2 || 91166A210 || McMaster Carr || [http://www.mcmaster.com/91166A210 91166A210] || [http://www.mcmaster.com McMaster-Carr] ||
+|| 4-40 washer || 2 || 94744A155 || McMaster Carr || [http://www.mcmaster.com/94744A155 94744A155] || [http://www.mcmaster.com McMaster-Carr] ||
+|| 1/8 in. nylon spacers || 2 || 94639A299 || McMaster Carr || [http://www.mcmaster.com/94639A299 94639A299] || [http://www.mcmaster.com McMaster-Carr] ||
 
 == Shield Variant 2.x.x ==
 
