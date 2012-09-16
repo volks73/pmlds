@@ -3,7 +3,7 @@
 
 = PMLDS Hardware Parts List =
 
-This is a complete parts list for the hardware necessary to build a PMLDS. The list is organized by variant (Shield or Standalone), but the majority of the hardware is the same for both variants. This list does not include in the printed circuit board (PCB), which must be obtained separating using the EAGLE schematic (.sch) and board (.brb) files. A copy of the parts list for each variant is included in the source code. Note, the Standalone variant uses some surface mount devices (SMDs) instead of through hole parts like the Shield variant.
+This is a complete parts list for the hardware necessary to build a PMLDS. The list is organized by variant (Shield or Standalone), but the majority of the hardware is the same for both variants. This list does not include in the printed circuit board (PCB), which must be obtained separating using the EAGLE schematic (.sch) and board (.brb) files. A copy of the parts list for each variant is included in the source code, but the most up-to-date listing is here. Note, the Standalone variant uses some surface mount devices (SMDs) instead of through hole parts like the Shield variant.
 
 The order number and supplier are only recommendations. Most parts can be purchased from any supplier or distributor.
 
