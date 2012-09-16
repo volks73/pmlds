@@ -68,6 +68,8 @@ The order number and supplier are only recommendations. Most parts can be purcha
 || Purple 22 AWG 7 stranded hook up wire || 100 ft || 3051 VI005 || Alpha Wire || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=A2016V-100-ND&x=0&y=0&cur=USD A2016V-100-ND] || [http://www.digikey.com Digi-Key] ||
 || Blue 22 AWG 7 stranded hook up wire || 100 ft || 3051 BL005 || Alpha Wire || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=A2016L-100-ND&x=0&y=0&cur=USD A2016L-100-ND] || [http://www.digikey.com Digi-Key] ||
 
+Note: A 100 ft of the hook up wire is not needed, but this is typically the smallest quantity available from suppliers.
+
 === Project Box Hardware ===
 
 || *Description* || *Qty* || *Part Number* || *Manufacturer* || *Order Number* || *Supplier* ||
@@ -137,6 +139,8 @@ The order number and supplier are only recommendations. Most parts can be purcha
 || Yellow 22 AWG 7 stranded hook up wire || 100 ft || 3051 YL005 || Alpha Wire || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=A2016Y-100-ND&x=0&y=0&cur=USD A2016Y-100-ND] || [http://www.digikey.com Digi-Key] ||
 || Purple 22 AWG 7 stranded hook up wire || 100 ft || 3051 VI005 || Alpha Wire || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=A2016V-100-ND&x=0&y=0&cur=USD A2016V-100-ND] || [http://www.digikey.com Digi-Key] ||
 || Blue 22 AWG 7 stranded hook up wire || 100 ft || 3051 BL005 || Alpha Wire || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=A2016L-100-ND&x=0&y=0&cur=USD A2016L-100-ND] || [http://www.digikey.com Digi-Key] ||
+
+Note: A 100 ft of the hook up wire is not needed, but this is typically the smallest quantity available from suppliers.
 
 === Project Box Hardware ===
 
