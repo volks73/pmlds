@@ -12,16 +12,13 @@ The order number and supplier are only recommendations. Most parts can be purcha
 === Printed Circuit Board Components ===
 
 || *Description* || *Qty* || *Part Number* || *Manufacturer* || *Order Number* || *Supplier* ||
-|| 4P4C Modular Jack PC mount || 1 || TM3RA-44(50) || Hirose Electric Co Ltd || [http://www.digikey.com/product-search/en?x=0&y=0&lang=en&site=us&KeyWords=H11254-ND H11254-ND] || [http://www.digikey.com Digi-Key] ||
 || Arduino Microcontroller || 1	|| ATmega328P || Atmel || [https://www.sparkfun.com/products/10524 DEV-10524] || [http://www.sparkfun.com Sparkfun] ||
 || RS-232 to TTL IC || 1 || MAX232CPE+ || Maxim || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=MAX232CPE%2B-ND&x=0&y=0&cur=USD MAX232CPE+-ND] || [http://www.digikey.com Digi-Key] ||
 || 1-CH 8-Bit I2C DAC Chip SMD || 1 || MAX517BCSA+ || Maxim || [http://www.digikey.com/product-detail/en/MAX517BCSA%2B/MAX517BCSA%2B-ND/948066 MAX517BCSA+-ND] || [http://www.digikey.com Digi-Key] ||
-|| 28-pin DIP Socket || 1 || 1-390261-9 || TE Connectivity || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=A100210-ND&x=0&y=0&cur=USD A100210-ND] || [http://www.digikey.com Digi-Key] ||
-|| 16-pin DIP Socket || 1 || 1-390261-4 || TE Connectivity || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=A100206-ND&x=0&y=0&cur=USD A100206-ND] || [http://www.digikey.com Digi-Key] ||
 || 24V to 9V voltage regulator || 1 || LM7809CT || Fairchild Semiconductor || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=LM7809CT-ND&x=0&y=0&cur=USD LM7809CT-ND] || [http://www.digikey.com Digi-Key] ||
+|| 9V to 5V voltage regulator || 1 || LM2940-5.0 || National Semiconductor || [http://www.digikey.com/product-detail/en/LM2940IMP-5.0%2FNOPB/LM2940IMP-5.0TR-ND/270714 LM2940IMP-5.0CT-ND] || [http://www.digikey.com Digi-Key] ||
 || TO-220 low profile heat sink || 1 || 507302B00000G || Aavid Thermalloy || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=HS115-ND&x=0&y=0&cur=USD HS115-ND] || [http://www.digikey.com Digi-Key] ||
 || TO-220 heat sink mount kit || 1 || 4880G || Aavid Thermalloy || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=HS417-ND&x=0&y=0&cur=USD HS417-ND] || [http://www.digikey.com Digi-Key] ||
-|| 9V to 5V voltage regulator || 1 || LM2940-5.0 || National Semiconductor || [http://www.digikey.com/product-detail/en/LM2940IMP-5.0%2FNOPB/LM2940IMP-5.0TR-ND/270714 LM2940IMP-5.0CT-ND] || [http://www.digikey.com Digi-Key] ||
 || 10K Ohm Through Hole Trim Pot || 1 || 3296W-1-103LF || Bourns Inc. || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=3296W-103LF-ND&x=0&y=0&cur=USD 3296W-103LF-ND] || [http://www.digikey.com Digi-Key] ||
 || 1 uF Through Hole Capacitor || 5 || C330C105K5R5TA || Kemet || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=399-4389-ND&x=0&y=0&cur=USD 399-4389-ND] || [http://www.digikey.com Digi-Key] ||
 || 22 uF Through Hole Capacitor || 2 ||	T350K226K035AT || Kemet || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=399-3595-ND&x=0&y=0&cur=USD 399-3595-ND] || [http://www.digikey.com Digi-Key] ||
@@ -33,6 +30,9 @@ The order number and supplier are only recommendations. Most parts can be purcha
 || 10 Ohm Through Hole Resistor || 1 || CFR-25JB-10R ||	Yageo || [http://www.digikey.com/product-detail/en/CFR-25JB-52-10R/10QBK-ND/340 10QBK-ND] || [http://www.digikey.com Digi-Key] ||
 || 10K Ohm Through Hole Resistor || 7 || CFR-25JB-10K || Yageo || [http://www.digikey.com/product-detail/en/CFR-25JB-52-10K/10KQBK-ND/338 10KQBK-ND] || [http://www.digikey.com Digi-Key] ||
 || 220 Ohm Through Hole Resistor || 1 || CFR-25JB-220R || Yageo || [http://www.digikey.com/product-detail/en/CFR-25JB-52-220R/220QBK-ND/1295 220QBK-ND] || [http://www.digikey.com Digi-Key] ||
+|| 28-pin DIP Socket || 1 || 1-390261-9 || TE Connectivity || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=A100210-ND&x=0&y=0&cur=USD A100210-ND] || [http://www.digikey.com Digi-Key] ||
+|| 16-pin DIP Socket || 1 || 1-390261-4 || TE Connectivity || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=A100206-ND&x=0&y=0&cur=USD A100206-ND] || [http://www.digikey.com Digi-Key] ||
+|| 4P4C Modular Jack PC mount || 1 || TM3RA-44(50) || Hirose Electric Co Ltd || [http://www.digikey.com/product-search/en?x=0&y=0&lang=en&site=us&KeyWords=H11254-ND H11254-ND] || [http://www.digikey.com Digi-Key] ||
 || Connection header 2-position with friction lock || 1 || 22-27-2021 || Molex Connector Corporation || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=WM4111-ND&x=0&y=0&cur=USD WM4111-ND] || [http://www.digikey.com Digi-Key] ||
 || Connection header 3-position with friction lock || 3	|| 22-27-2031 || Molex Connector Corporation ||	[http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=WM4112-ND&x=0&y=0&cur=USD WM4112-ND] || [http://www.digikey.com Digi-Key] ||
 || Connection header 4-position with friction lock || 1 || 22-27-2041 || Molex Connector Corporation || [http://www.digikey.com/scripts/DkSearch/dksus.dll?WT.z_header=search_go&lang=en&keywords=WM4113-ND&x=0&y=0&cur=USD WM4113-ND] || [http://www.digikey.com Digi-Key] ||
