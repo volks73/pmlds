@@ -46,6 +46,7 @@ The order number and supplier are only recommendations. Most parts can be purcha
 || DB9 Female connector || 1 || 171-009-203L001 || Norcomp Inc. || [http://www.digikey.com/product-detail/en/171-009-203L001/209FE-ND/858108 209FE-ND] || [http://www.digikey.com Digi-Key] ||
 || Electronic Pressure Control Unit || 1 || OEM-EP || Parker Hannifin Corp. || [http://ph.parker.com/webapp/wcs/stores/servlet/Product1_10151_12051_14565_-1 990-005101-015] || [http://www.parker.com/ Parker Hannifin Corp.] ||
 || 1000 uL/min Flow Meter || 1 || ASL1600 || Sensirion AG || [http://www.sensirion.com/en/products/liquid-flow-sensors/standard-flow-meters/flow-meter-asl1600/ ASL1600] || [http://www.sensirion.com/ Sensirion, Inc.] ||
+|| ASL/SLG Cable || 1 || 1-100136-01 || Sensirion AG || 1-100136-01 || [http://www.sensirion.com/ Sensirion, Inc.] ||
 || Bulkhead Union || 2 || P-440 || Upchurch || [http://www.idex-hs.com/products/ProductImage.aspx?ProductImageID=1875 P-440] || [http://www.idex-hs.com/ IDEX Health & Science] ||
 || 10-32 Coned Tubing Nuts || 2 || F-331 || Upchurch || [http://www.idex-hs.com/products/ProductImage.aspx?ProductImageID=1326 F-331x] || [http://www.idex-hs.com/ IDEX Health & Science] ||
 || 10-32 Flat Vacuum Nuts || 2 || P-844 || Upchurch || [http://www.idex-hs.com/products/ProductImage.aspx?ProductImageID=2123 P-844x] || [http://www.idex-hs.com/ IDEX Health & Science] ||
@@ -118,6 +119,7 @@ Note: A 100 ft of the hook up wire is not needed, but this is typically the smal
 || 24 V to 9 V voltage regulator || 1 || LM7809CT || Fairchild Semiconductor || [http://www.digikey.com/product-detail/en/LM7809CT/LM7809CT-ND/1923049 LM7809CT] || [http://www.digikey.com Digi-Key] ||
 || Electronic Pressure Control Unit || 1 || OEM-EP || Parker Hannifin Corp. || [http://ph.parker.com/webapp/wcs/stores/servlet/Product1_10151_12051_14565_-1 990-005101-015] || [http://www.parker.com/ Parker Hannifin Corp.] ||
 || 1000 uL/min Flow Meter || 1 || ASL1600 || Sensirion AG || [http://www.sensirion.com/en/products/liquid-flow-sensors/standard-flow-meters/flow-meter-asl1600/ ASL1600] || [http://www.sensirion.com/ Sensirion, Inc.] ||
+|| ASL/SLG Cable || 1 || 1-100136-01 || Sensirion AG || 1-100136-01 || [http://www.sensirion.com/ Sensirion, Inc.] ||
 || Bulkhead Union || 2 || P-440 || Upchurch || [http://www.idex-hs.com/products/ProductImage.aspx?ProductImageID=1875 P-440] || [http://www.idex-hs.com/ IDEX Health & Science] ||
 || 10-32 Coned Tubing Nuts || 2 || F-331 || Upchurch || [http://www.idex-hs.com/products/ProductImage.aspx?ProductImageID=1326 F-331x] || [http://www.idex-hs.com/ IDEX Health & Science] ||
 || 10-32 Flat Vacuum Nuts || 2 || P-844 || Upchurch || [http://www.idex-hs.com/products/ProductImage.aspx?ProductImageID=2123 P-844x] || [http://www.idex-hs.com/ IDEX Health & Science] ||
