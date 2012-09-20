@@ -35,7 +35,7 @@ The commands DF=##.#, KP=#.##E#, KI=#.##E#, and KD=#.##E# can only be set, or wr
 || IF? || Gets the instant flow rate in µL/min, which is not part of the 10-point, non-zero rolling average. ||
 || V=#.## || Sets the EPC control voltage in volts, range: 0-5 V, values greater than or less than the acceptable range are set to 5 and 0 V, respectively. Values must be left and right padded with zeros to match the proper length. The PID control must be paused (“| |” command) to set the control voltage. ||
 || V? || Gets the EPC control voltage in volts. ||
-|| P=##.# || Sets the pressure in PSI, range: 0-15 PSI, values greater than or less than the acceptable range are set to 15 and 0 PSI, respectively. Values must be left and right padded with zeros to match the proper length. The PID control must be paused (“||” command) to set the pressure. ||
+|| P=##.# || Sets the pressure in PSI, range: 0-15 PSI, values greater than or less than the acceptable range are set to 15 and 0 PSI, respectively. Values must be left and right padded with zeros to match the proper length. The PID control must be paused (“| |” command) to set the pressure. ||
 || P? || Gets the pressure in PSI. ||
 || KP=#.##E# || Sets the Kp constant for the PID control. This value is retained during power cycling. This value is unitless and does not have to be in scientific notation. ||
 || KP? || Gets the Kp constant for the PID control. This value is retained during power cycling. This value is unitless. ||
