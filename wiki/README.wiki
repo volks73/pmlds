@@ -15,12 +15,12 @@ pressure below the 10% of its full range is consider 0 PSI.
 
 == Installation == 
 
-Download and install the Arduino Integrated Development Environment(IDE) version 1.0, or newer, prior to proceeding with the installation. Once the IDE is installed, follow the directions from the IDE and the Arduino website (http://www.arduino.cc) for installing the Uno drivers and connecting an Arduino Uno to a computer for uploading code. 
+Download and install the Arduino Integrated Development Environment(IDE) version 1.0, or newer, prior to proceeding with the installation. Once the IDE is installed, follow the directions from the IDE and the [http://www.arduino.cc Arduino] website for installing the Uno drivers and connecting an Arduino Uno to a computer for uploading code. 
 
 Once the IDE and drivers are installed and an Arduino Uno is connected to a computer via the USB port, copy the ASL1600 and PID libraries to the library folder of the Arduino IDE. The Arduino IDE library folder is typically located at C:\path\to\IDE\libraries for the Windows operating system. In other words, the libraries folder is located in the same folder as the arduino.exe file. Make sure to copy both folders (ASL1600 and PID) from the 'libs' folder to the library folder. Restart the IDE. The two libraries should now be present in the list of libraries in the IDE. If not, review the steps 
 available with the IDE for installing and using user-created libraries. 
 
-Select the communications (COM) port the Arduino Uno is connected to within the IDE. Make sure all jumpers and shields have been removed the circuits and the Uno prior to uploading. Uploading code to the Uno is a delicate process and extra circuits and electrical connections make disrupt the upload process. Open the PMLDS.ino file within the IDE and upload the code to the microcontroller. For additional details on uploading code, see the IDE documentation or the Arduino website (http://www.arduino.cc). 
+Select the communications (COM) port the Arduino Uno is connected to within the IDE. Make sure all jumpers and shields have been removed the circuits and the Uno prior to uploading. Uploading code to the Uno is a delicate process and extra circuits and electrical connections make disrupt the upload process. Open the PMLDS.ino file within the IDE and upload the code to the microcontroller. For additional details on uploading code, see the IDE documentation or the [http://www.arduino.cc Arduino] website. 
 
 Once the code has been successfully uploaded to the controller, the PMLDS-specific circuit board, or shield, can be mounted on top of the Uno circuit board. The board and controller are then ready to be mounted in a housing with the appropriate switches, power supply, LCD screen, etc. 
 
