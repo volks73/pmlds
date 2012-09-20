@@ -30,7 +30,8 @@ Verision 2.0.0 adds computer communication to the PMLDS system. The computer com
 
 || *Command* || *Description* ||
 || T=##.# || Sets the target flow in uL/min T? Gets the target flow rate in uL/min ||
-|| A? || Gets the average flow rate in uL/min I? Gets the instant flow rate in uL/min, will be noisy compared to A? command 
+|| A? || Gets the average flow rate in uL/min || 
+|| I? || Gets the instant flow rate in uL/min, will be noisy compared to A? command ||
 || V=#.## || Sets the EPC control voltage in volts, note that PID control must be paused ||
 || V? || Gets the EPC control voltage in volts ||
 || P=##.# || Sets the pressure in PSI, note that PID control must be paused ||
