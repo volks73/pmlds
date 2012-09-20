@@ -29,11 +29,9 @@ The commands DF=##.#, KP=#.##E#, KI=#.##E#, and KD=#.##E# can only be set, or wr
 || *Command* || *Description* ||
 || TF=##.# || Sets the target flow rate in µL/min, range: 10-99 µL/min, values greater than or less than the acceptable range are set to 99 and 10 µL/min, respectively. ||
 || TF? || Gets the target flow rate in µL/min ||
-|| DF=##.# || Set the default flow rate in µL/min, range: 10-99 µL/min, values greater than or less than the acceptable range are set to 99 and 10 µL/min, respectively. 
-The default flow rate is the target flow rate on power up. This value is retained during power cycling. || 
+|| DF=##.# || Set the default flow rate in µL/min, range: 10-99 µL/min, values greater than or less than the acceptable range are set to 99 and 10 µL/min, respectively. The default flow rate is the target flow rate on power up. This value is retained during power cycling. || 
 || DF? || Gets the default flow rate in µL/min. This value is retained during power cycling. ||
-|| AF? || Gets the average flow rate in µL/min, flow rates greater than 100 µL/min are reported as 100 µL/min. 
-The average flow rate is a 10-point, non-zero rolling average to reduce the noisy measurements from the flow meter. ||
+|| AF? || Gets the average flow rate in µL/min, flow rates greater than 100 µL/min are reported as 100 µL/min. The average flow rate is a 10-point, non-zero rolling average to reduce the noisy measurements from the flow meter. ||
 || IF? || Gets the instant flow rate in µL/min, which is not part of the 10-point, non-zero rolling average. ||
 || V=#.## || Sets the EPC control voltage in volts, range: 0-5 V, values greater than or less than the acceptable range are set to 5 and 0 V, respectively. Values must be left and right padded with zeros to match the proper length. The PID control must be paused (“| |” command) to set the control voltage. ||
 || V? || Gets the EPC control voltage in volts. ||
