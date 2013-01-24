@@ -47,7 +47,7 @@ The following files will be created in the same folder as the EAGLE board (.brb)
 
 Note: The .l15 and .ly2 files only exist for 4-layer boards and may not be necessary. If inner layers exist, then the polarity and layer order/ID must be explicitly chosen. All other layers are handled automatically.
 
-Note: I have discovered a weird bug that crashes Windows Explorer when a file is named with the .stc extension. It has something to do with LibreOffice 3.6 and Windows 7 x64. I have renamed the extension to .stp within the EAGLE Job file to avoid crashing Windows Explorer.
+Note: I have discovered a weird bug that crashes Windows Explorer when a file is named with the .stc extension. It has something to do with Libre Office 3.6 and Windows 7 x64. I have renamed the extension to .stp within the EAGLE Job file to avoid crashing Windows Explorer.
 
 == GERBER File Organization ==
 
