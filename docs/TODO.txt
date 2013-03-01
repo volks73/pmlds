@@ -1,6 +1,8 @@
-***************************
-* NRL-PMLDS Firmware TODO *
-***************************
+= PMLDS Firmware TODO =
 
-- Add max and min pressure to EEPROM storage
-- Add serial commands to change the max and min pressure
+ # Add true pause mode where last flow rate and PID values are maintained
+ # Add "STOP" command ("[]") which acts just like the current pause command does where the PID control stopped and voltage and pressure can be set directly
+ # Add max and min pressure to EEPROM storage
+ # Add serial commands to change the max and min pressure
+ # Create branch that uses Eclipse and AVR Plugin
+ # Add PID autotune feature

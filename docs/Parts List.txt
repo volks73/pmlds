@@ -1,6 +1,4 @@
-************************
-* NRL-PMLDS Parts List *
-************************
+= PMLDS Parts List =
 
 === Printed Circuit Board Components ===
 
