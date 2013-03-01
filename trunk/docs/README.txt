@@ -1,9 +1,8 @@
-************************************************************** 
-* NRL-Pneumatically Modulated Liquid Delivery System (PMLDS) * 
-**************************************************************
+= Pneumatically Modulated Liquid Delivery System (PMLDS) =
 
-Created by: Christopher R. Field <christopher.field@nrl.navy.mil, 
-				  cfield2@gmail.com> 
+Created by: Christopher R. Field <christopher.field@nrl.navy.mil, cfield2@gmail.com> 
+
+== Introduction ==
 
 The Naval Research Laboratory-Pneumatically Modulated Liquid Delivery 
 System (NRL-PMLDS) is designed to deliver a stable, constant liquid flow 
